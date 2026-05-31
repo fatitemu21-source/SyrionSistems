@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- ============================================
+         CONFIGURACION BASICA DEL DOCUMENTO
+         ============================================ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDIO WEB - Portafolio de Diseño y Desarrollo Web</title>
+    
+    <!-- ============================================
+         ENLACES A HOJAS DE ESTILO EXTERNAS
+         normalize.css: iguala estilos entre navegadores
+         editor.css: estilos personalizados que crearemos despues
+         ============================================ -->
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="editor.css">
+</head>
+<body>
+
+    <!-- ============================================
+         VERSION ESCRITORIO (DESKTOP)
+         Se activa en pantallas grandes mediante CSS.
+         Contiene layout horizontal, espacios amplios
+         y carruseles con multiples tarjetas visibles.
+         ============================================ -->
+    <div class="version-desktop">
+
+
+        <!-- ============================================
+             SECCION: NAVEGACION PRINCIPAL DESKTOP
+             Posicion: Fija en la parte superior.
+             Contenido: Logo izquierda, links derecha.
+             Responsive: Esta barra solo se muestra en desktop.
+             ============================================ -->
+        <header class="desktop-nav-contenedor">
+            <div class="desktop-nav-interno">
+                
+                <!-- Logo temporal texto + icono codigo -->
+                <a href="index.html" class="desktop-nav-logo">
+                    <span class="desktop-nav-logo-icono">&lt;/&gt;</span>
+                    <span class="desktop-nav-logo-texto">STUDIO WEB</span>
+                </a>
+                
+                <!-- Links de navegacion -->
+                <nav class="desktop-nav-menu">
+                    <a href="index.html" class="desktop-nav-link desktop-nav-activo">Inicio</a>
+                    <a href="plantillas.html" class="desktop-nav-link">Plantillas</a>
+                    <a href="servicios.html" class="desktop-nav-link">Servicios</a>
+                    <a href="nosotros.html" class="desktop-nav-link">Nosotros</a>
+                </nav>
+            </div>
+        </header>
+
+
+        <!-- ============================================
+             SECCION: HERO DESKTOP
+             Propósito: Primera impresion. Pantalla completa.
+             Contenido: Titulo centrado, subtitulo, decoracion CSS.
+             Fondo: Negro absoluto con gradiente radial sutil.
+             ============================================ -->
+        <section class="desktop-hero">
+            
+            <!-- Decoracion: lineas diagonales animadas via CSS -->
+            <div class="desktop-hero-decoracion">
+                <div class="desktop-hero-linea desktop-hero-linea-uno"></div>
+                <div class="desktop-hero-linea desktop-hero-linea-dos"></div>
+                <div class="desktop-hero-linea desktop-hero-linea-tres"></div>
+            </div>
+            
+            <!-- Contenido central del hero -->
+            <div class="desktop-hero-contenido">
+                <h1 class="desktop-hero-titulo">Tu página web, sin complicaciones</h1>
+                <p class="desktop-hero-subtitulo">
+                    Plantillas profesionales o diseños personalizados. 
+                    Tú decides, nosotros construimos.
+                </p>
+                <a href="#desktop-formulario" class="desktop-hero-boton">Cotiza tu proyecto</a>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: FORMULARIO PRINCIPAL DESKTOP
+             Propósito: Captar leads. Conectado a Google Forms.
+             Layout: Centrado, ancho maximo 60vw.
+             Campos: Nombre, empresa, telefono, necesidades.
+             ============================================ -->
+        <section class="desktop-formulario" id="desktop-formulario">
+            <div class="desktop-formulario-caja">
+                
+                <h2 class="desktop-formulario-titulo">¿Qué necesitas?</h2>
+                <p class="desktop-formulario-texto">
+                    Cuéntanos tu idea y te contactamos por WhatsApp con una cotización.
+                </p>
+                
+                <!-- 
+                     NOTA TECNICA PARA CONEXION CON GOOGLE FORMS:
+                     Cuando crees tu formulario en Google Forms, obtendras la URL de envio.
+                     Reemplaza la action de abajo por esa URL.
+                     Los campos 'name' deben coincidir con las 'entry.XXXX' de Google Forms.
+                -->
+                <form action="https://docs.google.com/forms/d/e/FORMULARIO_ID/formResponse" 
+                      method="POST" 
+                      target="_blank"
+                      class="desktop-formulario-etiqueta">
+                    
+                    <div class="desktop-formulario-grupo">
+                        <label for="desktop-nombre" class="desktop-formulario-label">Nombre completo</label>
+                        <input type="text" 
+                               id="desktop-nombre" 
+                               name="entry.NOMBRE_ID" 
+                               class="desktop-formulario-input" 
+                               placeholder="Ej: Juan Pérez" 
+                               required>
+                    </div>
+                    
+                    <div class="desktop-formulario-grupo">
+                        <label for="desktop-empresa" class="desktop-formulario-label">Nombre de empresa</label>
+                        <input type="text" 
+                               id="desktop-empresa" 
+                               name="entry.EMPRESA_ID" 
+                               class="desktop-formulario-input" 
+                               placeholder="Ej: Cafetería Aurora">
+                    </div>
+                    
+                    <div class="desktop-formulario-grupo">
+                        <label for="desktop-telefono" class="desktop-formulario-label">Teléfono / WhatsApp</label>
+                        <input type="tel" 
+                               id="desktop-telefono" 
+                               name="entry.TELEFONO_ID" 
+                               class="desktop-formulario-input" 
+                               placeholder="Ej: +51 999 888 777" 
+                               required>
+                    </div>
+                    
+                    <div class="desktop-formulario-grupo">
+                        <label for="desktop-necesidades" class="desktop-formulario-label">¿Cómo quieres tu página web?</label>
+                        <textarea id="desktop-necesidades" 
+                                  name="entry.NECESIDADES_ID" 
+                                  class="desktop-formulario-textarea" 
+                                  rows="6" 
+                                  placeholder="Ej: Quiero una página para mi restaurante. Necesito menú digital, galería de fotos, formulario de reservas y que sea oscura con detalles en verde..."
+                                  required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="desktop-formulario-boton">
+                        Enviar solicitud
+                    </button>
+                </form>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: TESTIMONIOS DESKTOP (CARRUSEL)
+             Propósito: Credibilidad social. Carrusel horizontal.
+             Tecnica: scroll-snap CSS para deslizamiento tactil/mouse.
+             Expansion: Cada tarjeta tiene version completa via :target.
+             ============================================ -->
+        <section class="desktop-testimonios">
+            <div class="desktop-testimonios-cabecera">
+                <h2 class="desktop-testimonios-titulo">Lo que dicen nuestros clientes</h2>
+                <p class="desktop-testimonios-subtitulo">Desliza para ver más historias de éxito</p>
+            </div>
+            
+            <!-- Pista del carrusel: contenedor horizontal -->
+            <div class="desktop-carrusel-pista">
+                
+                <!-- Tarjeta 1 -->
+                <article class="desktop-carrusel-item" id="desktop-testi-1">
+                    <div class="desktop-testimonio-compacto">
+                        <div class="desktop-testimonio-estrellas">★★★★★</div>
+                        <h3 class="desktop-testimonio-cliente">María González</h3>
+                        <p class="desktop-testimonio-empresa">Cafetería Aurora</p>
+                        <p class="desktop-testimonio-texto">"El resultado superó todas mis expectativas. Mi menú digital quedó espectacular."</p>
+                        <a href="#desktop-testi-1-expandido" class="desktop-testimonio-vermas">Ver proyecto completo ↓</a>
+                    </div>
+                    
+                    <!-- Version expandida (se muestra con CSS :target) -->
+                    <div class="desktop-testimonio-expandido" id="desktop-testi-1-expandido">
+                        <p class="desktop-testimonio-largo">
+                            Contratamos a Studio Web para digitalizar la carta de nuestra cafetería. 
+                            El proceso fue increíblemente rápido: en 48 horas teníamos el diseño listo y 
+                            en 72 horas ya estaba en línea. Nuestros clientes ahora escanean el QR desde 
+                            la mesa y hacen sus pedidos sin esperar al mozo. Las ventas subieron un 30% 
+                            en el primer mes.
+                        </p>
+                        <img src="https://placehold.co/800x500/141414/00d4ff?text=Proyecto+Cafeter%C3%ADa+Aurora" 
+                             alt="Vista previa del proyecto Cafetería Aurora" 
+                             class="desktop-testimonio-imagen">
+                        <a href="#desktop-testi-1" class="desktop-testimonio-cerrar">Cerrar detalle ↑</a>
+                    </div>
+                </article>
+                
+                <!-- Tarjeta 2 -->
+                <article class="desktop-carrusel-item" id="desktop-testi-2">
+                    <div class="desktop-testimonio-compacto">
+                        <div class="desktop-testimonio-estrellas">★★★★★</div>
+                        <h3 class="desktop-testimonio-cliente">Carlos Ruiz</h3>
+                        <p class="desktop-testimonio-empresa">Taller Mecánico Ruiz</p>
+                        <p class="desktop-testimonio-texto">"Profesionales de verdad. Mi página carga en un segundo y ya tengo 5 citas diarias."</p>
+                        <a href="#desktop-testi-2-expandido" class="desktop-testimonio-vermas">Ver proyecto completo ↓</a>
+                    </div>
+                    <div class="desktop-testimonio-expandido" id="desktop-testi-2-expandido">
+                        <p class="desktop-testimonio-largo">
+                            Necesitaba una web simple donde mis clientes pudieran ver los servicios 
+                            y agendar citas. Studio Web me entregó una página ultraligera que abre 
+                            incluso en celulares viejos. La gente me encuentra en Google, ve los precios 
+                            claros y reserva por WhatsApp directo. Lo mejor: no pago mantenimiento mensual.
+                        </p>
+                        <img src="https://placehold.co/800x500/141414/00d4ff?text=Proyecto+Taller+Ruiz" 
+                             alt="Vista previa del proyecto Taller Ruiz" 
+                             class="desktop-testimonio-imagen">
+                        <a href="#desktop-testi-2" class="desktop-testimonio-cerrar">Cerrar detalle ↑</a>
+                    </div>
+                </article>
+                
+                <!-- Tarjeta 3 -->
+                <article class="desktop-carrusel-item" id="desktop-testi-3">
+                    <div class="desktop-testimonio-compacto">
+                        <div class="desktop-testimonio-estrellas">★★★★★</div>
+                        <h3 class="desktop-testimonio-cliente">Ana Lucero</h3>
+                        <p class="desktop-testimonio-empresa">Estudio de Yoga Namaste</p>
+                        <p class="desktop-testimonio-texto">"Diseño limpio, tranquilo y perfecto para mi marca. Mis alumnos aman la experiencia."</p>
+                        <a href="#desktop-testi-3-expandido" class="desktop-testimonio-vermas">Ver proyecto completo ↓</a>
+                    </div>
+                    <div class="desktop-testimonio-expandido" id="desktop-testi-3-expandido">
+                        <p class="desktop-testimonio-largo">
+                            Buscaba una página que transmitiera calma y profesionalismo. 
+                            El equipo entendió perfectamente la esencia de mi estudio. Usaron 
+                            colores suaves, tipografía elegante y una galería de fotos que 
+                            carga sin tardar. Recibo consultas de nuevos alumnos todos los días 
+                            a través del formulario de contacto.
+                        </p>
+                        <img src="https://placehold.co/800x500/141414/00d4ff?text=Proyecto+Yoga+Namaste" 
+                             alt="Vista previa del proyecto Yoga Namaste" 
+                             class="desktop-testimonio-imagen">
+                        <a href="#desktop-testi-3" class="desktop-testimonio-cerrar">Cerrar detalle ↑</a>
+                    </div>
+                </article>
+                
+                <!-- Tarjeta 4 -->
+                <article class="desktop-carrusel-item" id="desktop-testi-4">
+                    <div class="desktop-testimonio-compacto">
+                        <div class="desktop-testimonio-estrellas">★★★★★</div>
+                        <h3 class="desktop-testimonio-cliente">Pedro Vargas</h3>
+                        <p class="desktop-testimonio-empresa">Fotografía Vargas</p>
+                        <p class="desktop-testimonio-texto">"Mi portafolio de fotos se ve increíble en cualquier pantalla. Contrato cerrado en 24h."</p>
+                        <a href="#desktop-testi-4-expandido" class="desktop-testimonio-vermas">Ver proyecto completo ↓</a>
+                    </div>
+                    <div class="desktop-testimonio-expandido" id="desktop-testi-4-expandido">
+                        <p class="desktop-testimonio-largo">
+                            Como fotógrafo, necesitaba que mis imágenes se vieran nítidas y 
+                            rápido. Studio Web creó una galería tipo masonry que se adapta 
+                            sola al tamaño de la pantalla. Los clientes potenciales entran, 
+                            ven mi trabajo inmediatamente y me contactan. El diseño oscuro 
+                            hace que mis fotos resalten mucho más.
+                        </p>
+                        <img src="https://placehold.co/800x500/141414/00d4ff?text=Proyecto+Fotografia+Vargas" 
+                             alt="Vista previa del proyecto Fotografía Vargas" 
+                             class="desktop-testimonio-imagen">
+                        <a href="#desktop-testi-4" class="desktop-testimonio-cerrar">Cerrar detalle ↑</a>
+                    </div>
+                </article>
+                
+            </div>
+            
+            <!-- Flechas de navegacion del carrusel (anclas a cada tarjeta) -->
+            <div class="desktop-carrusel-navegacion">
+                <a href="#desktop-testi-1" class="desktop-carrusel-flecha desktop-carrusel-flecha-izq">← Anterior</a>
+                <a href="#desktop-testi-4" class="desktop-carrusel-flecha desktop-carrusel-flecha-der">Siguiente →</a>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: CATEGORIAS DE PLANTILLAS DESKTOP
+             Propósito: Mostrar preview de plantillas disponibles.
+             Formato: Carrusel horizontal dinamico.
+             Cada tarjeta: imagen, titulo, precio, boton.
+             ============================================ -->
+        <section class="desktop-categorias">
+            <div class="desktop-categorias-cabecera">
+                <h2 class="desktop-categorias-titulo">Empieza con una plantilla</h2>
+                <p class="desktop-categorias-subtitulo">Diseños probados, listos para tu negocio</p>
+            </div>
+            
+            <div class="desktop-categorias-pista">
+                
+                <!-- Categoria 1 -->
+                <article class="desktop-categoria-tarjeta" id="desktop-cat-1">
+                    <div class="desktop-categoria-imagen-contenedor">
+                        <img src="https://placehold.co/600x400/141414/00d4ff?text=Restaurantes" 
+                             alt="Plantilla para restaurantes" 
+                             class="desktop-categoria-imagen">
+                        <div class="desktop-categoria-overlay">
+                            <a href="plantillas.html#categoria-restaurantes" class="desktop-categoria-boton-overlay">Ver plantillas</a>
+                        </div>
+                    </div>
+                    <div class="desktop-categoria-info">
+                        <h3 class="desktop-categoria-nombre">Restaurantes</h3>
+                        <p class="desktop-categoria-descripcion">Menús digitales, galerías y reservas.</p>
+                        <p class="desktop-categoria-precio">Desde S/ 299</p>
+                        <a href="plantillas.html#categoria-restaurantes" class="desktop-categoria-boton">Explorar →</a>
+                    </div>
+                </article>
+                
+                <!-- Categoria 2 -->
+                <article class="desktop-categoria-tarjeta" id="desktop-cat-2">
+                    <div class="desktop-categoria-imagen-contenedor">
+                        <img src="https://placehold.co/600x400/141414/7c3aed?text=Profesionales" 
+                             alt="Plantilla para profesionales" 
+                             class="desktop-categoria-imagen">
+                        <div class="desktop-categoria-overlay">
+                            <a href="plantillas.html#categoria-profesionales" class="desktop-categoria-boton-overlay">Ver plantillas</a>
+                        </div>
+                    </div>
+                    <div class="desktop-categoria-info">
+                        <h3 class="desktop-categoria-nombre">Profesionales</h3>
+                        <p class="desktop-categoria-descripcion">CV online, consultorios y servicios.</p>
+                        <p class="desktop-categoria-precio">Desde S/ 349</p>
+                        <a href="plantillas.html#categoria-profesionales" class="desktop-categoria-boton">Explorar →</a>
+                    </div>
+                </article>
+                
+                <!-- Categoria 3 -->
+                <article class="desktop-categoria-tarjeta" id="desktop-cat-3">
+                    <div class="desktop-categoria-imagen-contenedor">
+                        <img src="https://placehold.co/600x400/141414/00d4ff?text=Eventos" 
+                             alt="Plantilla para eventos" 
+                             class="desktop-categoria-imagen">
+                        <div class="desktop-categoria-overlay">
+                            <a href="plantillas.html#categoria-eventos" class="desktop-categoria-boton-overlay">Ver plantillas</a>
+                        </div>
+                    </div>
+                    <div class="desktop-categoria-info">
+                        <h3 class="desktop-categoria-nombre">Eventos</h3>
+                        <p class="desktop-categoria-descripcion">Bodas, cumpleaños y lanzamientos.</p>
+                        <p class="desktop-categoria-precio">Desde S/ 279</p>
+                        <a href="plantillas.html#categoria-eventos" class="desktop-categoria-boton">Explorar →</a>
+                    </div>
+                </article>
+                
+                <!-- Categoria 4 -->
+                <article class="desktop-categoria-tarjeta" id="desktop-cat-4">
+                    <div class="desktop-categoria-imagen-contenedor">
+                        <img src="https://placehold.co/600x400/141414/7c3aed?text=E-Commerce" 
+                             alt="Plantilla para e-commerce simple" 
+                             class="desktop-categoria-imagen">
+                        <div class="desktop-categoria-overlay">
+                            <a href="plantillas.html#categoria-ecommerce" class="desktop-categoria-boton-overlay">Ver plantillas</a>
+                        </div>
+                    </div>
+                    <div class="desktop-categoria-info">
+                        <h3 class="desktop-categoria-nombre">E-Commerce Simple</h3>
+                        <p class="desktop-categoria-descripcion">Catalogo de productos y WhatsApp venta.</p>
+                        <p class="desktop-categoria-precio">Desde S/ 499</p>
+                        <a href="plantillas.html#categoria-ecommerce" class="desktop-categoria-boton">Explorar →</a>
+                    </div>
+                </article>
+                
+            </div>
+            
+            <div class="desktop-categorias-navegacion">
+                <a href="#desktop-cat-1" class="desktop-categorias-flecha">←</a>
+                <a href="#desktop-cat-4" class="desktop-categorias-flecha">→</a>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: SERVICIOS EXPRESS DESKTOP
+             Propósito: Alternativas rapidas para quien no 
+             quiere plantilla desde cero.
+             Layout: 3 bloques horizontales.
+             ============================================ -->
+        <section class="desktop-servicios">
+            <div class="desktop-servicios-cabecera">
+                <h2 class="desktop-servicios-titulo">¿Necesitas algo más específico?</h2>
+            </div>
+            
+            <div class="desktop-servicios-grid">
+                
+                <!-- Bloque 1 -->
+                <article class="desktop-servicio-bloque">
+                    <div class="desktop-servicio-icono">
+                        <!-- Icono SVG: Personalizar -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 20h9"/>
+                            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="desktop-servicio-nombre">Personaliza tu plantilla</h3>
+                    <p class="desktop-servicio-texto">
+                        Elige una base y la adaptamos a tus colores, textos e imagenes.
+                    </p>
+                    <a href="plantillas.html#personalizar" class="desktop-servicio-link">Ver opciones →</a>
+                </article>
+                
+                <!-- Bloque 2 -->
+                <article class="desktop-servicio-bloque">
+                    <div class="desktop-servicio-icono">
+                        <!-- Icono SVG: Mejorar -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+                            <path d="M3 3v5h5"/>
+                            <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/>
+                            <path d="M16 21h5v-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="desktop-servicio-nombre">Mejora tu página actual</h3>
+                    <p class="desktop-servicio-texto">
+                        Ya tienes web pero se ve vieja o lenta? La optimizamos por completo.
+                    </p>
+                    <a href="servicios.html#mejorar" class="desktop-servicio-link">Solicitar revisión →</a>
+                </article>
+                
+                <!-- Bloque 3 -->
+                <article class="desktop-servicio-bloque">
+                    <div class="desktop-servicio-icono">
+                        <!-- Icono SVG: Contratar -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                        </svg>
+                    </div>
+                    <h3 class="desktop-servicio-nombre">Contrata nuestro equipo</h3>
+                    <p class="desktop-servicio-texto">
+                        Planes mensuales de diseño, soporte y actualizaciones continuas.
+                    </p>
+                    <a href="servicios.html#contratos" class="desktop-servicio-link">Ver planes →</a>
+                </article>
+                
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: FOOTER DESKTOP
+             Propósito: Cierre de pagina. Info de contacto, 
+             navegacion, redes y copyright.
+             ============================================ -->
+        <footer class="desktop-footer">
+            <div class="desktop-footer-interno">
+                
+                <!-- Columna 1: Marca -->
+                <div class="desktop-footer-columna">
+                    <div class="desktop-footer-logo">
+                        <span class="desktop-footer-logo-icono">&lt;/&gt;</span>
+                        <span class="desktop-footer-logo-texto">STUDIO WEB</span>
+                    </div>
+                    <p class="desktop-footer-frase">Código limpio, resultados claros.</p>
+                </div>
+                
+                <!-- Columna 2: Navegacion -->
+                <div class="desktop-footer-columna">
+                    <h4 class="desktop-footer-titulo-columna">Navegación</h4>
+                    <nav class="desktop-footer-links">
+                        <a href="index.html" class="desktop-footer-link">Inicio</a>
+                        <a href="plantillas.html" class="desktop-footer-link">Plantillas</a>
+                        <a href="servicios.html" class="desktop-footer-link">Servicios</a>
+                        <a href="nosotros.html" class="desktop-footer-link">Nosotros</a>
+                    </nav>
+                </div>
+                
+                <!-- Columna 3: Servicios -->
+                <div class="desktop-footer-columna">
+                    <h4 class="desktop-footer-titulo-columna">Servicios</h4>
+                    <nav class="desktop-footer-links">
+                        <a href="plantillas.html" class="desktop-footer-link">Plantillas web</a>
+                        <a href="plantillas.html#personalizar" class="desktop-footer-link">Personalización</a>
+                        <a href="servicios.html#mejorar" class="desktop-footer-link">Mejoras</a>
+                        <a href="servicios.html#contratos" class="desktop-footer-link">Contratos</a>
+                    </nav>
+                </div>
+                
+                <!-- Columna 4: Contacto -->
+                <div class="desktop-footer-columna">
+                    <h4 class="desktop-footer-titulo-columna">Contacto</h4>
+                    <p class="desktop-footer-contacto">
+                        <span>WhatsApp: +51 999 000 000</span>
+                        <span>Email: hola@studioweb.pe</span>
+                    </p>
+                    <div class="desktop-footer-redes">
+                        <!-- Instagram -->
+                        <a href="#" class="desktop-footer-red" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </a>
+                        <!-- Facebook -->
+                        <a href="#" class="desktop-footer-red" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                        <!-- TikTok -->
+                        <a href="#" class="desktop-footer-red" aria-label="TikTok">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>
+                            </svg>
+                        </a>
+                        <!-- LinkedIn -->
+                        <a href="#" class="desktop-footer-red" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </a>
+                        <!-- WhatsApp -->
+                        <a href="#" class="desktop-footer-red" aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="desktop-footer-copyright">
+                <p>© 2026 STUDIO WEB. Todos los derechos reservados.</p>
+                <a href="#" class="desktop-footer-politica">Política de privacidad</a>
+            </div>
+        </footer>
+
+
+    </div>
+    <!-- FIN VERSION DESKTOP -->
+
+
+    <!-- ============================================
+         VERSION TABLET
+         Se activa en pantallas medianas (768px - 1024px).
+         Layout intermedio: nav comprimido, tarjetas mas grandes,
+         carruseles con 2 items visibles, formulario ancho reducido.
+         ============================================ -->
+    <div class="version-tablet">
+
+
+        <!-- ============================================
+             SECCION: NAVEGACION PRINCIPAL TABLET
+             Posicion: Fija arriba. Logo + links mas compactos.
+             ============================================ -->
+        <header class="tablet-nav-contenedor">
+            <div class="tablet-nav-interno">
+                <a href="index.html" class="tablet-nav-logo">
+                    <span class="tablet-nav-logo-icono">&lt;/&gt;</span>
+                    <span class="tablet-nav-logo-texto">STUDIO WEB</span>
+                </a>
+                <nav class="tablet-nav-menu">
+                    <a href="index.html" class="tablet-nav-link tablet-nav-activo">Inicio</a>
+                    <a href="plantillas.html" class="tablet-nav-link">Plantillas</a>
+                    <a href="servicios.html" class="tablet-nav-link">Servicios</a>
+                    <a href="nosotros.html" class="tablet-nav-link">Nosotros</a>
+                </nav>
+            </div>
+        </header>
+
+
+        <!-- ============================================
+             SECCION: HERO TABLET
+             Pantalla completa pero con tipografia adaptada.
+             ============================================ -->
+        <section class="tablet-hero">
+            <div class="tablet-hero-decoracion">
+                <div class="tablet-hero-linea tablet-hero-linea-uno"></div>
+                <div class="tablet-hero-linea tablet-hero-linea-dos"></div>
+            </div>
+            <div class="tablet-hero-contenido">
+                <h1 class="tablet-hero-titulo">Tu página web, sin complicaciones</h1>
+                <p class="tablet-hero-subtitulo">
+                    Plantillas profesionales o diseños personalizados. 
+                    Tú decides, nosotros construimos.
+                </p>
+                <a href="#tablet-formulario" class="tablet-hero-boton">Cotiza tu proyecto</a>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: FORMULARIO PRINCIPAL TABLET
+             Layout: Ancho 80vw, centrado.
+             Mismos campos que desktop pero mas espaciados verticalmente.
+             ============================================ -->
+        <section class="tablet-formulario" id="tablet-formulario">
+            <div class="tablet-formulario-caja">
+                <h2 class="tablet-formulario-titulo">¿Qué necesitas?</h2>
+                <p class="tablet-formulario-texto">Cuéntanos tu idea y te contactamos por WhatsApp.</p>
+                
+                <form action="https://docs.google.com/forms/d/e/FORMULARIO_ID/formResponse" 
+                      method="POST" 
+                      target="_blank"
+                      class="tablet-formulario-etiqueta">
+                    
+                    <div class="tablet-formulario-grupo">
+                        <label for="tablet-nombre" class="tablet-formulario-label">Nombre completo</label>
+                        <input type="text" id="tablet-nombre" name="entry.NOMBRE_ID" 
+                               class="tablet-formulario-input" placeholder="Ej: Juan Pérez" required>
+                    </div>
+                    
+                    <div class="tablet-formulario-grupo">
+                        <label for="tablet-empresa" class="tablet-formulario-label">Nombre de empresa</label>
+                        <input type="text" id="tablet-empresa" name="entry.EMPRESA_ID" 
+                               class="tablet-formulario-input" placeholder="Ej: Cafetería Aurora">
+                    </div>
+                    
+                    <div class="tablet-formulario-grupo">
+                        <label for="tablet-telefono" class="tablet-formulario-label">Teléfono / WhatsApp</label>
+                        <input type="tel" id="tablet-telefono" name="entry.TELEFONO_ID" 
+                               class="tablet-formulario-input" placeholder="Ej: +51 999 888 777" required>
+                    </div>
+                    
+                    <div class="tablet-formulario-grupo">
+                        <label for="tablet-necesidades" class="tablet-formulario-label">¿Cómo quieres tu página web?</label>
+                        <textarea id="tablet-necesidades" name="entry.NECESIDADES_ID" 
+                                  class="tablet-formulario-textarea" rows="5" 
+                                  placeholder="Ej: Quiero una página para mi restaurante..."
+                                  required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="tablet-formulario-boton">Enviar solicitud</button>
+                </form>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: TESTIMONIOS TABLET (CARRUSEL)
+             Carrusel con tarjetas mas anchas, 2 visibles aprox.
+             Mismo sistema de expansion :target.
+             ============================================ -->
+        <section class="tablet-testimonios">
+            <div class="tablet-testimonios-cabecera">
+                <h2 class="tablet-testimonios-titulo">Lo que dicen nuestros clientes</h2>
+                <p class="tablet-testimonios-subtitulo">Desliza para ver más</p>
+            </div>
+            
+            <div class="tablet-carrusel-pista">
+                
+                <article class="tablet-carrusel-item" id="tablet-testi-1">
+                    <div class="tablet-testimonio-compacto">
+                        <div class="tablet-testimonio-estrellas">★★★★★</div>
+                        <h3 class="tablet-testimonio-cliente">María González</h3>
+                        <p class="tablet-testimonio-empresa">Cafetería Aurora</p>
+                        <p class="tablet-testimonio-texto">"El resultado superó mis expectativas. Mi menú digital quedó espectacular."</p>
+                        <a href="#tablet-testi-1-expandido" class="tablet-testimonio-vermas">Ver proyecto ↓</a>
+                    </div>
+                    <div class="tablet-testimonio-expandido" id="tablet-testi-1-expandido">
+                        <p class="tablet-testimonio-largo">Contratamos a Studio Web para digitalizar la carta de nuestra cafetería...</p>
+                        <img src="https://placehold.co/700x400/141414/00d4ff?text=Proyecto+Cafeter%C3%ADa+Aurora" 
+                             alt="Proyecto Cafetería Aurora" class="tablet-testimonio-imagen">
+                        <a href="#tablet-testi-1" class="tablet-testimonio-cerrar">Cerrar ↑</a>
+                    </div>
+                </article>
+                
+                <article class="tablet-carrusel-item" id="tablet-testi-2">
+                    <div class="tablet-testimonio-compacto">
+                        <div class="tablet-testimonio-estrellas">★★★★★</div>
+                        <h3 class="tablet-testimonio-cliente">Carlos Ruiz</h3>
+                        <p class="tablet-testimonio-empresa">Taller Mecánico Ruiz</p>
+                        <p class="tablet-testimonio-texto">"Mi página carga en un segundo y ya tengo 5 citas diarias."</p>
+                        <a href="#tablet-testi-2-expandido" class="tablet-testimonio-vermas">Ver proyecto ↓</a>
+                    </div>
+                    <div class="tablet-testimonio-expandido" id="tablet-testi-2-expandido">
+                        <p class="tablet-testimonio-largo">Necesitaba una web simple donde mis clientes pudieran ver los servicios...</p>
+                        <img src="https://placehold.co/700x400/141414/00d4ff?text=Proyecto+Taller+Ruiz" 
+                             alt="Proyecto Taller Ruiz" class="tablet-testimonio-imagen">
+                        <a href="#tablet-testi-2" class="tablet-testimonio-cerrar">Cerrar ↑</a>
+                    </div>
+                </article>
+                
+                <article class="tablet-carrusel-item" id="tablet-testi-3">
+                    <div class="tablet-testimonio-compacto">
+                        <div class="tablet-testimonio-estrellas">★★★★★</div>
+                        <h3 class="tablet-testimonio-cliente">Ana Lucero</h3>
+                        <p class="tablet-testimonio-empresa">Yoga Namaste</p>
+                        <p class="tablet-testimonio-texto">"Diseño limpio y perfecto para mi marca. Mis alumnos aman la experiencia."</p>
+                        <a href="#tablet-testi-3-expandido" class="tablet-testimonio-vermas">Ver proyecto ↓</a>
+                    </div>
+                    <div class="tablet-testimonio-expandido" id="tablet-testi-3-expandido">
+                        <p class="tablet-testimonio-largo">Buscaba una página que transmitiera calma y profesionalismo...</p>
+                        <img src="https://placehold.co/700x400/141414/00d4ff?text=Proyecto+Yoga+Namaste" 
+                             alt="Proyecto Yoga Namaste" class="tablet-testimonio-imagen">
+                        <a href="#tablet-testi-3" class="tablet-testimonio-cerrar">Cerrar ↑</a>
+                    </div>
+                </article>
+                
+                <article class="tablet-carrusel-item" id="tablet-testi-4">
+                    <div class="tablet-testimonio-compacto">
+                        <div class="tablet-testimonio-estrellas">★★★★★</div>
+                        <h3 class="tablet-testimonio-cliente">Pedro Vargas</h3>
+                        <p class="tablet-testimonio-empresa">Fotografía Vargas</p>
+                        <p class="tablet-testimonio-texto">"Mi portafolio se ve increíble en cualquier pantalla. Contrato en 24h."</p>
+                        <a href="#tablet-testi-4-expandido" class="tablet-testimonio-vermas">Ver proyecto ↓</a>
+                    </div>
+                    <div class="tablet-testimonio-expandido" id="tablet-testi-4-expandido">
+                        <p class="tablet-testimonio-largo">Como fotógrafo, necesitaba que mis imágenes se vieran nítidas...</p>
+                        <img src="https://placehold.co/700x400/141414/00d4ff?text=Proyecto+Fotografia+Vargas" 
+                             alt="Proyecto Fotografía Vargas" class="tablet-testimonio-imagen">
+                        <a href="#tablet-testi-4" class="tablet-testimonio-cerrar">Cerrar ↑</a>
+                    </div>
+                </article>
+                
+            </div>
+            
+            <div class="tablet-carrusel-navegacion">
+                <a href="#tablet-testi-1" class="tablet-carrusel-flecha">←</a>
+                <a href="#tablet-testi-4" class="tablet-carrusel-flecha">→</a>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: CATEGORIAS TABLET (CARRUSEL)
+             Tarjetas mas grandes, 2 visibles por scroll.
+             ============================================ -->
+        <section class="tablet-categorias">
+            <div class="tablet-categorias-cabecera">
+                <h2 class="tablet-categorias-titulo">Empieza con una plantilla</h2>
+                <p class="tablet-categorias-subtitulo">Diseños probados para tu negocio</p>
+            </div>
+            
+            <div class="tablet-categorias-pista">
+                
+                <article class="tablet-categoria-tarjeta" id="tablet-cat-1">
+                    <div class="tablet-categoria-imagen-contenedor">
+                        <img src="https://placehold.co/500x350/141414/00d4ff?text=Restaurantes" 
+                             alt="Plantilla restaurantes" class="tablet-categoria-imagen">
+                        <div class="tablet-categoria-overlay">
+                            <a href="plantillas.html#categoria-restaurantes" class="tablet-categoria-boton-overlay">Ver</a>
+                        </div>
+                    </div>
+                    <div class="tablet-categoria-info">
+                        <h3 class="tablet-categoria-nombre">Restaurantes</h3>
+                        <p class="tablet-categoria-descripcion">Menús digitales y reservas.</p>
+                        <p class="tablet-categoria-precio">Desde S/ 299</p>
+                        <a href="plantillas.html#categoria-restaurantes" class="tablet-categoria-boton">Explorar →</a>
+                    </div>
+                </article>
+                
+                <article class="tablet-categoria-tarjeta" id="tablet-cat-2">
+                    <div class="tablet-categoria-imagen-contenedor">
+                        <img src="https://placehold.co/500x350/141414/7c3aed?text=Profesionales" 
+                             alt="Plantilla profesionales" class="tablet-categoria-imagen">
+                        <div class="tablet-categoria-overlay">
+                            <a href="plantillas.html#categoria-profesionales" class="tablet-categoria-boton-overlay">Ver</a>
+                        </div>
+                    </div>
+                    <div class="tablet-categoria-info">
+                        <h3 class="tablet-categoria-nombre">Profesionales</h3>
+                        <p class="tablet-categoria-descripcion">CV online y consultorios.</p>
+                        <p class="tablet-categoria-precio">Desde S/ 349</p>
+                        <a href="plantillas.html#categoria-profesionales" class="tablet-categoria-boton">Explorar →</a>
+                    </div>
+                </article>
+                
+                <article class="tablet-categoria-tarjeta" id="tablet-cat-3">
+                    <div class="tablet-categoria-imagen-contenedor">
+                        <img src="https://placehold.co/500x350/141414/00d4ff?text=Eventos" 
+                             alt="Plantilla eventos" class="tablet-categoria-imagen">
+                        <div class="tablet-categoria-overlay">
+                            <a href="plantillas.html#categoria-eventos" class="tablet-categoria-boton-overlay">Ver</a>
+                        </div>
+                    </div>
+                    <div class="tablet-categoria-info">
+                        <h3 class="tablet-categoria-nombre">Eventos</h3>
+                        <p class="tablet-categoria-descripcion">Bodas y lanzamientos.</p>
+                        <p class="tablet-categoria-precio">Desde S/ 279</p>
+                        <a href="plantillas.html#categoria-eventos" class="tablet-categoria-boton">Explorar →</a>
+                    </div>
+                </article>
+                
+                <article class="tablet-categoria-tarjeta" id="tablet-cat-4">
+                    <div class="tablet-categoria-imagen-contenedor">
+                        <img src="https://placehold.co/500x350/141414/7c3aed?text=E-Commerce" 
+                             alt="Plantilla e-commerce" class="tablet-categoria-imagen">
+                        <div class="tablet-categoria-overlay">
+                            <a href="plantillas.html#categoria-ecommerce" class="tablet-categoria-boton-overlay">Ver</a>
+                        </div>
+                    </div>
+                    <div class="tablet-categoria-info">
+                        <h3 class="tablet-categoria-nombre">E-Commerce Simple</h3>
+                        <p class="tablet-categoria-descripcion">Catálogo y venta por WhatsApp.</p>
+                        <p class="tablet-categoria-precio">Desde S/ 499</p>
+                        <a href="plantillas.html#categoria-ecommerce" class="tablet-categoria-boton">Explorar →</a>
+                    </div>
+                </article>
+                
+            </div>
+            
+            <div class="tablet-categorias-navegacion">
+                <a href="#tablet-cat-1" class="tablet-categorias-flecha">←</a>
+                <a href="#tablet-cat-4" class="tablet-categorias-flecha">→</a>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: SERVICIOS EXPRESS TABLET
+             3 bloques en columna o 2+1 segun espacio.
+             ============================================ -->
+        <section class="tablet-servicios">
+            <div class="tablet-servicios-cabecera">
+                <h2 class="tablet-servicios-titulo">¿Necesitas algo más específico?</h2>
+            </div>
+            <div class="tablet-servicios-grid">
+                
+                <article class="tablet-servicio-bloque">
+                    <div class="tablet-servicio-icono">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="tablet-servicio-nombre">Personaliza tu plantilla</h3>
+                    <p class="tablet-servicio-texto">Elige una base y la adaptamos a tu marca.</p>
+                    <a href="plantillas.html#personalizar" class="tablet-servicio-link">Ver opciones →</a>
+                </article>
+                
+                <article class="tablet-servicio-bloque">
+                    <div class="tablet-servicio-icono">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+                            <path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/>
+                            <path d="M16 21h5v-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="tablet-servicio-nombre">Mejora tu página actual</h3>
+                    <p class="tablet-servicio-texto">¿Web lenta o vieja? La optimizamos.</p>
+                    <a href="servicios.html#mejorar" class="tablet-servicio-link">Solicitar →</a>
+                </article>
+                
+                <article class="tablet-servicio-bloque">
+                    <div class="tablet-servicio-icono">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                        </svg>
+                    </div>
+                    <h3 class="tablet-servicio-nombre">Contrata nuestro equipo</h3>
+                    <p class="tablet-servicio-texto">Planes mensuales de diseño y soporte.</p>
+                    <a href="servicios.html#contratos" class="tablet-servicio-link">Ver planes →</a>
+                </article>
+                
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: FOOTER TABLET
+             2 columnas de info + copyright.
+             ============================================ -->
+        <footer class="tablet-footer">
+            <div class="tablet-footer-interno">
+                <div class="tablet-footer-columna">
+                    <div class="tablet-footer-logo">
+                        <span class="tablet-footer-logo-icono">&lt;/&gt;</span>
+                        <span class="tablet-footer-logo-texto">STUDIO WEB</span>
+                    </div>
+                    <p class="tablet-footer-frase">Código limpio, resultados claros.</p>
+                </div>
+                <div class="tablet-footer-columna">
+                    <h4 class="tablet-footer-titulo-columna">Links</h4>
+                    <nav class="tablet-footer-links">
+                        <a href="index.html" class="tablet-footer-link">Inicio</a>
+                        <a href="plantillas.html" class="tablet-footer-link">Plantillas</a>
+                        <a href="servicios.html" class="tablet-footer-link">Servicios</a>
+                        <a href="nosotros.html" class="tablet-footer-link">Nosotros</a>
+                    </nav>
+                </div>
+                <div class="tablet-footer-columna">
+                    <h4 class="tablet-footer-titulo-columna">Contacto</h4>
+                    <p class="tablet-footer-contacto">
+                        <span>WhatsApp: +51 999 000 000</span>
+                        <span>Email: hola@studioweb.pe</span>
+                    </p>
+                    <div class="tablet-footer-redes">
+                        <a href="#" class="tablet-footer-red" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="tablet-footer-red" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="tablet-footer-red" aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="tablet-footer-copyright">
+                <p>© 2026 STUDIO WEB. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+
+
+    </div>
+    <!-- FIN VERSION TABLET -->
+
+
+    <!-- ============================================
+         VERSION MOVIL (MOBILE)
+         Se activa en pantallas pequeñas (menos de 768px).
+         Layout vertical unico. Menu hamburguesa via checkbox hack.
+         Tarjetas de carrusel una por vista. Textos mas grandes
+         para lectura comoda en celular. Botones mas anchos.
+         ============================================ -->
+    <div class="version-mobile">
+
+
+        <!-- ============================================
+             SECCION: NAVEGACION PRINCIPAL MOBILE
+             Tecnica: Checkbox hack para menu hamburguesa.
+             El input checkbox controla mostrar/ocultar el menu.
+             Sin JavaScript.
+             ============================================ -->
+        <header class="mobile-nav-contenedor">
+            
+            <!-- Barra superior visible siempre -->
+            <div class="mobile-nav-barra">
+                <a href="index.html" class="mobile-nav-logo">
+                    <span class="mobile-nav-logo-icono">&lt;/&gt;</span>
+                    <span class="mobile-nav-logo-texto">STUDIO WEB</span>
+                </a>
+                
+                <!-- Boton hamburguesa: el label activa el checkbox oculto -->
+                <label for="mobile-menu-toggle" class="mobile-menu-boton" aria-label="Abrir menu">
+                    <span class="mobile-menu-linea"></span>
+                    <span class="mobile-menu-linea"></span>
+                    <span class="mobile-menu-linea"></span>
+                </label>
+            </div>
+            
+            <!-- Checkbox oculto que controla el estado del menu -->
+            <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-checkbox">
+            
+            <!-- Menu desplegable: se muestra cuando checkbox esta checked -->
+            <nav class="mobile-nav-menu">
+                <a href="index.html" class="mobile-nav-link mobile-nav-activo">Inicio</a>
+                <a href="plantillas.html" class="mobile-nav-link">Plantillas</a>
+                <a href="servicios.html" class="mobile-nav-link">Servicios</a>
+                <a href="nosotros.html" class="mobile-nav-link">Nosotros</a>
+            </nav>
+        </header>
+
+
+        <!-- ============================================
+             SECCION: HERO MOBILE
+             Pantalla completa, texto grande, boton ancho.
+             ============================================ -->
+        <section class="mobile-hero">
+            <div class="mobile-hero-decoracion">
+                <div class="mobile-hero-linea mobile-hero-linea-uno"></div>
+            </div>
+            <div class="mobile-hero-contenido">
+                <h1 class="mobile-hero-titulo">Tu página web, sin complicaciones</h1>
+                <p class="mobile-hero-subtitulo">
+                    Plantillas profesionales o diseños personalizados.
+                </p>
+                <a href="#mobile-formulario" class="mobile-hero-boton">Cotiza tu proyecto</a>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: FORMULARIO PRINCIPAL MOBILE
+             Ancho 90vw, inputs grandes para dedos, 
+             boton ancho y alto para facil clic.
+             ============================================ -->
+        <section class="mobile-formulario" id="mobile-formulario">
+            <div class="mobile-formulario-caja">
+                <h2 class="mobile-formulario-titulo">¿Qué necesitas?</h2>
+                <p class="mobile-formulario-texto">Cuéntanos y te escribimos por WhatsApp.</p>
+                
+                <form action="https://docs.google.com/forms/d/e/FORMULARIO_ID/formResponse" 
+                      method="POST" 
+                      target="_blank"
+                      class="mobile-formulario-etiqueta">
+                    
+                    <div class="mobile-formulario-grupo">
+                        <label for="mobile-nombre" class="mobile-formulario-label">Nombre completo</label>
+                        <input type="text" id="mobile-nombre" name="entry.NOMBRE_ID" 
+                               class="mobile-formulario-input" placeholder="Ej: Juan Pérez" required>
+                    </div>
+                    
+                    <div class="mobile-formulario-grupo">
+                        <label for="mobile-empresa" class="mobile-formulario-label">Empresa (opcional)</label>
+                        <input type="text" id="mobile-empresa" name="entry.EMPRESA_ID" 
+                               class="mobile-formulario-input" placeholder="Ej: Mi Negocio">
+                    </div>
+                    
+                    <div class="mobile-formulario-grupo">
+                        <label for="mobile-telefono" class="mobile-formulario-label">WhatsApp</label>
+                        <input type="tel" id="mobile-telefono" name="entry.TELEFONO_ID" 
+                               class="mobile-formulario-input" placeholder="Ej: +51 999 888 777" required>
+                    </div>
+                    
+                    <div class="mobile-formulario-grupo">
+                        <label for="mobile-necesidades" class="mobile-formulario-label">¿Cómo quieres tu web?</label>
+                        <textarea id="mobile-necesidades" name="entry.NECESIDADES_ID" 
+                                  class="mobile-formulario-textarea" rows="4" 
+                                  placeholder="Ej: Quiero una página para mi restaurante..."
+                                  required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="mobile-formulario-boton">Enviar solicitud</button>
+                </form>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: TESTIMONIOS MOBILE (CARRUSEL)
+             Una tarjeta por pantalla. Scroll snap obligatorio.
+             Flechas grandes para pulsar con dedo.
+             ============================================ -->
+        <section class="mobile-testimonios">
+            <div class="mobile-testimonios-cabecera">
+                <h2 class="mobile-testimonios-titulo">Clientes felices</h2>
+                <p class="mobile-testimonios-subtitulo">Desliza para leer más ↓</p>
+            </div>
+            
+            <div class="mobile-carrusel-pista">
+                
+                <article class="mobile-carrusel-item" id="mobile-testi-1">
+                    <div class="mobile-testimonio-compacto">
+                        <div class="mobile-testimonio-estrellas">★★★★★</div>
+                        <h3 class="mobile-testimonio-cliente">María González</h3>
+                        <p class="mobile-testimonio-empresa">Cafetería Aurora</p>
+                        <p class="mobile-testimonio-texto">"El resultado superó mis expectativas. Mi menú digital quedó espectacular."</p>
+                        <a href="#mobile-testi-1-expandido" class="mobile-testimonio-vermas">Ver más ↓</a>
+                    </div>
+                    <div class="mobile-testimonio-expandido" id="mobile-testi-1-expandido">
+                        <p class="mobile-testimonio-largo">Contratamos a Studio Web para digitalizar la carta de nuestra cafetería. El proceso fue increíblemente rápido y las ventas subieron un 30%.</p>
+                        <img src="https://placehold.co/600x350/141414/00d4ff?text=Proyecto+Cafeter%C3%ADa" 
+                             alt="Proyecto Cafetería" class="mobile-testimonio-imagen">
+                        <a href="#mobile-testi-1" class="mobile-testimonio-cerrar">↑ Cerrar</a>
+                    </div>
+                </article>
+                
+                <article class="mobile-carrusel-item" id="mobile-testi-2">
+                    <div class="mobile-testimonio-compacto">
+                        <div class="mobile-testimonio-estrellas">★★★★★</div>
+                        <h3 class="mobile-testimonio-cliente">Carlos Ruiz</h3>
+                        <p class="mobile-testimonio-empresa">Taller Mecánico Ruiz</p>
+                        <p class="mobile-testimonio-texto">"Mi página carga en un segundo y ya tengo 5 citas diarias."</p>
+                        <a href="#mobile-testi-2-expandido" class="mobile-testimonio-vermas">Ver más ↓</a>
+                    </div>
+                    <div class="mobile-testimonio-expandido" id="mobile-testi-2-expandido">
+                        <p class="mobile-testimonio-largo">Necesitaba una web simple donde mis clientes pudieran ver los servicios y agendar. La gente me encuentra en Google y reserva por WhatsApp.</p>
+                        <img src="https://placehold.co/600x350/141414/00d4ff?text=Proyecto+Taller" 
+                             alt="Proyecto Taller" class="mobile-testimonio-imagen">
+                        <a href="#mobile-testi-2" class="mobile-testimonio-cerrar">↑ Cerrar</a>
+                    </div>
+                </article>
+                
+                <article class="mobile-carrusel-item" id="mobile-testi-3">
+                    <div class="mobile-testimonio-compacto">
+                        <div class="mobile-testimonio-estrellas">★★★★★</div>
+                        <h3 class="mobile-testimonio-cliente">Ana Lucero</h3>
+                        <p class="mobile-testimonio-empresa">Yoga Namaste</p>
+                        <p class="mobile-testimonio-texto">"Diseño limpio y perfecto para mi marca. Mis alumnos aman la experiencia."</p>
+                        <a href="#mobile-testi-3-expandido" class="mobile-testimonio-vermas">Ver más ↓</a>
+                    </div>
+                    <div class="mobile-testimonio-expandido" id="mobile-testi-3-expandido">
+                        <p class="mobile-testimonio-largo">Buscaba una página que transmitiera calma. El equipo entendió la esencia de mi estudio. Recibo consultas de nuevos alumnos todos los días.</p>
+                        <img src="https://placehold.co/600x350/141414/00d4ff?text=Proyecto+Yoga" 
+                             alt="Proyecto Yoga" class="mobile-testimonio-imagen">
+                        <a href="#mobile-testi-3" class="mobile-testimonio-cerrar">↑ Cerrar</a>
+                    </div>
+                </article>
+                
+                <article class="mobile-carrusel-item" id="mobile-testi-4">
+                    <div class="mobile-testimonio-compacto">
+                        <div class="mobile-testimonio-estrellas">★★★★★</div>
+                        <h3 class="mobile-testimonio-cliente">Pedro Vargas</h3>
+                        <p class="mobile-testimonio-empresa">Fotografía Vargas</p>
+                        <p class="mobile-testimonio-texto">"Mi portafolio se ve increíble en cualquier pantalla. Contrato en 24h."</p>
+                        <a href="#mobile-testi-4-expandido" class="mobile-testimonio-vermas">Ver más ↓</a>
+                    </div>
+                    <div class="mobile-testimonio-expandido" id="mobile-testi-4-expandido">
+                        <p class="mobile-testimonio-largo">Como fotógrafo, necesitaba que mis imágenes se vieran nítidas. La galería se adapta sola al tamaño de la pantalla. El diseño oscuro hace que mis fotos resalten.</p>
+                        <img src="https://placehold.co/600x350/141414/00d4ff?text=Proyecto+Fotos" 
+                             alt="Proyecto Fotos" class="mobile-testimonio-imagen">
+                        <a href="#mobile-testi-4" class="mobile-testimonio-cerrar">↑ Cerrar</a>
+                    </div>
+                </article>
+                
+            </div>
+            
+            <div class="mobile-carrusel-navegacion">
+                <a href="#mobile-testi-1" class="mobile-carrusel-flecha">←</a>
+                <a href="#mobile-testi-4" class="mobile-carrusel-flecha">→</a>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: CATEGORIAS MOBILE (CARRUSEL)
+             Tarjetas grandes, una por pantalla aprox.
+             Botones anchos para facil toque.
+             ============================================ -->
+        <section class="mobile-categorias">
+            <div class="mobile-categorias-cabecera">
+                <h2 class="mobile-categorias-titulo">Empieza con una plantilla</h2>
+                <p class="mobile-categorias-subtitulo">Desliza para ver categorías ↓</p>
+            </div>
+            
+            <div class="mobile-categorias-pista">
+                
+                <article class="mobile-categoria-tarjeta" id="mobile-cat-1">
+                    <div class="mobile-categoria-imagen-contenedor">
+                        <img src="https://placehold.co/400x280/141414/00d4ff?text=Restaurantes" 
+                             alt="Plantilla restaurantes" class="mobile-categoria-imagen">
+                    </div>
+                    <div class="mobile-categoria-info">
+                        <h3 class="mobile-categoria-nombre">Restaurantes</h3>
+                        <p class="mobile-categoria-descripcion">Menús digitales, galerías y reservas.</p>
+                        <p class="mobile-categoria-precio">Desde S/ 299</p>
+                        <a href="plantillas.html#categoria-restaurantes" class="mobile-categoria-boton">Ver plantillas →</a>
+                    </div>
+                </article>
+                
+                <article class="mobile-categoria-tarjeta" id="mobile-cat-2">
+                    <div class="mobile-categoria-imagen-contenedor">
+                        <img src="https://placehold.co/400x280/141414/7c3aed?text=Profesionales" 
+                             alt="Plantilla profesionales" class="mobile-categoria-imagen">
+                    </div>
+                    <div class="mobile-categoria-info">
+                        <h3 class="mobile-categoria-nombre">Profesionales</h3>
+                        <p class="mobile-categoria-descripcion">CV online y consultorios.</p>
+                        <p class="mobile-categoria-precio">Desde S/ 349</p>
+                        <a href="plantillas.html#categoria-profesionales" class="mobile-categoria-boton">Ver plantillas →</a>
+                    </div>
+                </article>
+                
+                <article class="mobile-categoria-tarjeta" id="mobile-cat-3">
+                    <div class="mobile-categoria-imagen-contenedor">
+                        <img src="https://placehold.co/400x280/141414/00d4ff?text=Eventos" 
+                             alt="Plantilla eventos" class="mobile-categoria-imagen">
+                    </div>
+                    <div class="mobile-categoria-info">
+                        <h3 class="mobile-categoria-nombre">Eventos</h3>
+                        <p class="mobile-categoria-descripcion">Bodas, cumpleaños y lanzamientos.</p>
+                        <p class="mobile-categoria-precio">Desde S/ 279</p>
+                        <a href="plantillas.html#categoria-eventos" class="mobile-categoria-boton">Ver plantillas →</a>
+                    </div>
+                </article>
+                
+                <article class="mobile-categoria-tarjeta" id="mobile-cat-4">
+                    <div class="mobile-categoria-imagen-contenedor">
+                        <img src="https://placehold.co/400x280/141414/7c3aed?text=E-Commerce" 
+                             alt="Plantilla e-commerce" class="mobile-categoria-imagen">
+                    </div>
+                    <div class="mobile-categoria-info">
+                        <h3 class="mobile-categoria-nombre">E-Commerce</h3>
+                        <p class="mobile-categoria-descripcion">Catálogo y venta por WhatsApp.</p>
+                        <p class="mobile-categoria-precio">Desde S/ 499</p>
+                        <a href="plantillas.html#categoria-ecommerce" class="mobile-categoria-boton">Ver plantillas →</a>
+                    </div>
+                </article>
+                
+            </div>
+            
+            <div class="mobile-categorias-navegacion">
+                <a href="#mobile-cat-1" class="mobile-categorias-flecha">←</a>
+                <a href="#mobile-cat-4" class="mobile-categorias-flecha">→</a>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: SERVICIOS EXPRESS MOBILE
+             3 bloques apilados verticalmente.
+             Iconos grandes, textos cortos, botones anchos.
+             ============================================ -->
+        <section class="mobile-servicios">
+            <div class="mobile-servicios-cabecera">
+                <h2 class="mobile-servicios-titulo">¿Necesitas algo más?</h2>
+            </div>
+            <div class="mobile-servicios-grid">
+                
+                <article class="mobile-servicio-bloque">
+                    <div class="mobile-servicio-icono">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="mobile-servicio-nombre">Personaliza tu plantilla</h3>
+                    <p class="mobile-servicio-texto">Elige una base y la adaptamos a tu marca.</p>
+                    <a href="plantillas.html#personalizar" class="mobile-servicio-link">Ver opciones →</a>
+                </article>
+                
+                <article class="mobile-servicio-bloque">
+                    <div class="mobile-servicio-icono">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+                            <path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/>
+                            <path d="M16 21h5v-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="mobile-servicio-nombre">Mejora tu página actual</h3>
+                    <p class="mobile-servicio-texto">¿Web lenta o vieja? La optimizamos por completo.</p>
+                    <a href="servicios.html#mejorar" class="mobile-servicio-link">Solicitar →</a>
+                </article>
+                
+                <article class="mobile-servicio-bloque">
+                    <div class="mobile-servicio-icono">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                        </svg>
+                    </div>
+                    <h3 class="mobile-servicio-nombre">Contrata nuestro equipo</h3>
+                    <p class="mobile-servicio-texto">Planes mensuales de diseño y soporte.</p>
+                    <a href="servicios.html#contratos" class="mobile-servicio-link">Ver planes →</a>
+                </article>
+                
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: FOOTER MOBILE
+             Todo apilado verticalmente. Redes grandes.
+             WhatsApp destacado como canal principal.
+             ============================================ -->
+        <footer class="mobile-footer">
+            <div class="mobile-footer-interno">
+                <div class="mobile-footer-marca">
+                    <span class="mobile-footer-logo-icono">&lt;/&gt;</span>
+                    <span class="mobile-footer-logo-texto">STUDIO WEB</span>
+                    <p class="mobile-footer-frase">Código limpio, resultados claros.</p>
+                </div>
+                
+                <nav class="mobile-footer-links">
+                    <a href="index.html" class="mobile-footer-link">Inicio</a>
+                    <a href="plantillas.html" class="mobile-footer-link">Plantillas</a>
+                    <a href="servicios.html" class="mobile-footer-link">Servicios</a>
+                    <a href="nosotros.html" class="mobile-footer-link">Nosotros</a>
+                </nav>
+                
+                <div class="mobile-footer-contacto">
+                    <a href="https://wa.me/51999000000" class="mobile-footer-whatsapp">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                        </svg>
+                        Escribir por WhatsApp
+                    </a>
+                    <p class="mobile-footer-email">hola@studioweb.pe</p>
+                </div>
+                
+                <div class="mobile-footer-redes">
+                    <a href="#" class="mobile-footer-red" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="mobile-footer-red" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="mobile-footer-red" aria-label="TikTok">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mobile-footer-copyright">
+                <p>© 2026 STUDIO WEB.</p>
+                <a href="#" class="mobile-footer-politica">Política de privacidad</a>
+            </div>
+        </footer>
+
+
+    </div>
+    <!-- FIN VERSION MOBILE -->
+
+
+</body>
+</html>

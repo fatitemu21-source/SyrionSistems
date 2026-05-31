@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- ============================================
+         CONFIGURACION BASICA DEL DOCUMENTO
+         ============================================ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantillas Web - STUDIO WEB</title>
+    
+    <!-- ============================================
+         ENLACES A HOJAS DE ESTILO EXTERNAS
+         ============================================ -->
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="editor.css">
+</head>
+<body>
+
+    <!-- ######################################################################################### -->
+    <!-- ## VERSION ESCRITORIO (DESKTOP)                                                        ## -->
+    <!-- ######################################################################################### -->
+    <div class="version-desktop">
+
+
+        <!-- ============================================
+             SECCION: NAVEGACION PRINCIPAL DESKTOP
+             ============================================ -->
+        <header class="desktop-nav-contenedor">
+            <div class="desktop-nav-interno">
+                <a href="index.html" class="desktop-nav-logo">
+                    <span class="desktop-nav-logo-icono">&lt;/&gt;</span>
+                    <span class="desktop-nav-logo-texto">STUDIO WEB</span>
+                </a>
+                <nav class="desktop-nav-menu">
+                    <a href="index.html" class="desktop-nav-link">Inicio</a>
+                    <a href="plantillas.html" class="desktop-nav-link desktop-nav-activo">Plantillas</a>
+                    <a href="servicios.html" class="desktop-nav-link">Servicios</a>
+                    <a href="nosotros.html" class="desktop-nav-link">Nosotros</a>
+                </nav>
+            </div>
+        </header>
+
+
+        <!-- ============================================
+             SECCION: HERO PLANTILLAS DESKTOP
+             Propósito: Explicar el modelo de negocio.
+             Dos caminos: plantilla lista vs personalizada.
+             ============================================ -->
+        <section class="desktop-hero-plantillas">
+            <div class="desktop-hero-plantillas-contenido">
+                <h1 class="desktop-hero-plantillas-titulo">Elige tu base</h1>
+                <p class="desktop-hero-plantillas-subtitulo">
+                    Plantillas listas para usar en minutos, o personalizamos una 
+                    hasta el último detalle. Tú decides el nivel de control.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: COMPARATIVO PLANTILLA VS PERSONALIZADO
+             Propósito: Educar al cliente para que no consulte sin saber.
+             Layout: Dos tarjetas lado a lado.
+             ============================================ -->
+        <section class="desktop-comparativo">
+            <div class="desktop-comparativo-grid">
+                
+                <!-- Opcion A -->
+                <article class="desktop-comparativo-tarjeta">
+                    <div class="desktop-comparativo-icono">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/>
+                            <polyline points="13 2 13 9 20 9"/>
+                        </svg>
+                    </div>
+                    <h2 class="desktop-comparativo-titulo">Plantilla lista</h2>
+                    <p class="desktop-comparativo-texto">
+                        Eliges un diseño probado, nosotros lo configuramos con tus textos, 
+                        colores y logo. Entrega en 24-48 horas. Ideal si necesitas salir YA.
+                    </p>
+                    <ul class="desktop-comparativo-lista">
+                        <li class="desktop-comparativo-item">✓ Más económico</li>
+                        <li class="desktop-comparativo-item">✓ Entrega ultra rápida</li>
+                        <li class="desktop-comparativo-item">✓ Estructura probada</li>
+                        <li class="desktop-comparativo-item">✓ Cambios de color y texto</li>
+                    </ul>
+                    <p class="desktop-comparativo-precio">Desde S/ 279</p>
+                </article>
+                
+                <!-- Opcion B -->
+                <article class="desktop-comparativo-tarjeta desktop-comparativo-destacado">
+                    <div class="desktop-comparativo-icono">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 20h9"/>
+                            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                        </svg>
+                    </div>
+                    <h2 class="desktop-comparativo-titulo">Personalizada</h2>
+                    <p class="desktop-comparativo-texto">
+                        Partimos de una plantilla y la transformamos completamente. 
+                        Layouts únicos, secciones extra, animaciones especiales. 
+                        Para quien busca diferenciarse.
+                    </p>
+                    <ul class="desktop-comparativo-lista">
+                        <li class="desktop-comparativo-item">✓ Diseño único</li>
+                        <li class="desktop-comparativo-item">✓ Secciones a medida</li>
+                        <li class="desktop-comparativo-item">✓ Reuniones de ajuste</li>
+                        <li class="desktop-comparativo-item">✓ Soporte post-entrega</li>
+                    </ul>
+                    <p class="desktop-comparativo-precio">Cotización personalizada</p>
+                </article>
+                
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: FILTROS POR CATEGORIA DESKTOP
+             Propósito: Permitir filtrar plantillas sin JS.
+             Tecnica: Cada categoria es una seccion con ID.
+             Los botones son links a esos IDs. CSS :target 
+             mostrara solo la categoria activa.
+             ============================================ -->
+        <section class="desktop-filtros">
+            <h2 class="desktop-filtros-titulo">Explora por categoría</h2>
+            <nav class="desktop-filtros-menu">
+                <a href="#desktop-categoria-todos" class="desktop-filtros-boton desktop-filtros-activo">Todos</a>
+                <a href="#desktop-categoria-restaurantes" class="desktop-filtros-boton">Restaurantes</a>
+                <a href="#desktop-categoria-profesionales" class="desktop-filtros-boton">Profesionales</a>
+                <a href="#desktop-categoria-eventos" class="desktop-filtros-boton">Eventos</a>
+                <a href="#desktop-categoria-ecommerce" class="desktop-filtros-boton">E-Commerce</a>
+            </nav>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: GRID DE PLANTILLAS DESKTOP
+             Propósito: Mostrar todas las plantillas disponibles.
+             Layout: Grid de 3 columnas.
+             Cada tarjeta: preview, nombre, descripcion, precio, 
+             dos botones (comprar / personalizar).
+             ============================================ -->
+        <section class="desktop-plantillas-grid">
+            
+            <!-- CATEGORIA: TODOS (se muestra por defecto) -->
+            <div class="desktop-plantillas-categoria" id="desktop-categoria-todos">
+                
+                <!-- Plantilla 1 -->
+                <article class="desktop-plantilla-tarjeta">
+                    <div class="desktop-plantilla-imagen-contenedor">
+                        <img src="https://placehold.co/600x400/141414/00d4ff?text=Menu+Digital+Oscuro" 
+                             alt="Plantilla menú digital oscuro" 
+                             class="desktop-plantilla-imagen">
+                    </div>
+                    <div class="desktop-plantilla-info">
+                        <span class="desktop-plantilla-tag">Restaurantes</span>
+                        <h3 class="desktop-plantilla-nombre">Menú Digital Oscuro</h3>
+                        <p class="desktop-plantilla-descripcion">
+                            Carta QR con categorías desplegables, fotos de platos y botón de pedido por WhatsApp.
+                        </p>
+                        <p class="desktop-plantilla-precio">S/ 299</p>
+                        <div class="desktop-plantilla-botones">
+                            <a href="#desktop-formulario-compra" class="desktop-plantilla-boton desktop-plantilla-boton-primario">Comprar plantilla</a>
+                            <a href="#desktop-formulario-personalizar" class="desktop-plantilla-boton desktop-plantilla-boton-secundario">Personalizar</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Plantilla 2 -->
+                <article class="desktop-plantilla-tarjeta">
+                    <div class="desktop-plantilla-imagen-contenedor">
+                        <img src="https://placehold.co/600x400/141414/7c3aed?text=CV+Profesional+Minimal" 
+                             alt="Plantilla CV profesional minimal" 
+                             class="desktop-plantilla-imagen">
+                    </div>
+                    <div class="desktop-plantilla-info">
+                        <span class="desktop-plantilla-tag">Profesionales</span>
+                        <h3 class="desktop-plantilla-nombre">CV Profesional Minimal</h3>
+                        <p class="desktop-plantilla-descripcion">
+                            Perfil elegante para abogados, arquitectos o consultores. Timeline de experiencia y contacto directo.
+                        </p>
+                        <p class="desktop-plantilla-precio">S/ 349</p>
+                        <div class="desktop-plantilla-botones">
+                            <a href="#desktop-formulario-compra" class="desktop-plantilla-boton desktop-plantilla-boton-primario">Comprar plantilla</a>
+                            <a href="#desktop-formulario-personalizar" class="desktop-plantilla-boton desktop-plantilla-boton-secundario">Personalizar</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Plantilla 3 -->
+                <article class="desktop-plantilla-tarjeta">
+                    <div class="desktop-plantilla-imagen-contenedor">
+                        <img src="https://placehold.co/600x400/141414/00d4ff?text=Landing+Evento+Elegante" 
+                             alt="Plantilla landing evento elegante" 
+                             class="desktop-plantilla-imagen">
+                    </div>
+                    <div class="desktop-plantilla-info">
+                        <span class="desktop-plantilla-tag">Eventos</span>
+                        <h3 class="desktop-plantilla-nombre">Landing Evento Elegante</h3>
+                        <p class="desktop-plantilla-descripcion">
+                            Cuenta regresiva, galería de fotos, RSVP y mapa de ubicación. Perfecto para bodas o lanzamientos.
+                        </p>
+                        <p class="desktop-plantilla-precio">S/ 279</p>
+                        <div class="desktop-plantilla-botones">
+                            <a href="#desktop-formulario-compra" class="desktop-plantilla-boton desktop-plantilla-boton-primario">Comprar plantilla</a>
+                            <a href="#desktop-formulario-personalizar" class="desktop-plantilla-boton desktop-plantilla-boton-secundario">Personalizar</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Plantilla 4 -->
+                <article class="desktop-plantilla-tarjeta">
+                    <div class="desktop-plantilla-imagen-contenedor">
+                        <img src="https://placehold.co/600x400/141414/7c3aed?text=Catalogo+WhatsApp+Shop" 
+                             alt="Plantilla catálogo WhatsApp shop" 
+                             class="desktop-plantilla-imagen">
+                    </div>
+                    <div class="desktop-plantilla-info">
+                        <span class="desktop-plantilla-tag">E-Commerce</span>
+                        <h3 class="desktop-plantilla-nombre">Catálogo WhatsApp Shop</h3>
+                        <p class="desktop-plantilla-descripcion">
+                            Grid de productos con precios, filtros por categoría y botón "Pedir por WhatsApp" en cada item.
+                        </p>
+                        <p class="desktop-plantilla-precio">S/ 499</p>
+                        <div class="desktop-plantilla-botones">
+                            <a href="#desktop-formulario-compra" class="desktop-plantilla-boton desktop-plantilla-boton-primario">Comprar plantilla</a>
+                            <a href="#desktop-formulario-personalizar" class="desktop-plantilla-boton desktop-plantilla-boton-secundario">Personalizar</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Plantilla 5 -->
+                <article class="desktop-plantilla-tarjeta">
+                    <div class="desktop-plantilla-imagen-contenedor">
+                        <img src="https://placehold.co/600x400/141414/00d4ff?text=Barberia+Retro+Style" 
+                             alt="Plantilla barbería retro style" 
+                             class="desktop-plantilla-imagen">
+                    </div>
+                    <div class="desktop-plantilla-info">
+                        <span class="desktop-plantilla-tag">Restaurantes</span>
+                        <h3 class="desktop-plantilla-nombre">Barbería Retro Style</h3>
+                        <p class="desktop-plantilla-descripcion">
+                            Estética vintage con servicios, precios, galería de cortes y reserva de citas. Ideal para barberías y salones.
+                        </p>
+                        <p class="desktop-plantilla-precio">S/ 329</p>
+                        <div class="desktop-plantilla-botones">
+                            <a href="#desktop-formulario-compra" class="desktop-plantilla-boton desktop-plantilla-boton-primario">Comprar plantilla</a>
+                            <a href="#desktop-formulario-personalizar" class="desktop-plantilla-boton desktop-plantilla-boton-secundario">Personalizar</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Plantilla 6 -->
+                <article class="desktop-plantilla-tarjeta">
+                    <div class="desktop-plantilla-imagen-contenedor">
+                        <img src="https://placehold.co/600x400/141414/7c3aed?text=Portafolio+Fotografo+Dark" 
+                             alt="Plantilla portafolio fotógrafo dark" 
+                             class="desktop-plantilla-imagen">
+                    </div>
+                    <div class="desktop-plantilla-info">
+                        <span class="desktop-plantilla-tag">Profesionales</span>
+                        <h3 class="desktop-plantilla-nombre">Portafolio Fotógrafo Dark</h3>
+                        <p class="desktop-plantilla-descripcion">
+                            Galería tipo masonry, categorías por tipo de sesión y contacto para contrataciones. Fondo oscuro que resalta las fotos.
+                        </p>
+                        <p class="desktop-plantilla-precio">S/ 379</p>
+                        <div class="desktop-plantilla-botones">
+                            <a href="#desktop-formulario-compra" class="desktop-plantilla-boton desktop-plantilla-boton-primario">Comprar plantilla</a>
+                            <a href="#desktop-formulario-personalizar" class="desktop-plantilla-boton desktop-plantilla-boton-secundario">Personalizar</a>
+                        </div>
+                    </div>
+                </article>
+                
+            </div>
+            
+            <!-- CATEGORIA: RESTAURANTES -->
+            <div class="desktop-plantillas-categoria" id="desktop-categoria-restaurantes">
+                <article class="desktop-plantilla-tarjeta">
+                    <div class="desktop-plantilla-imagen-contenedor">
+                        <img src="https://placehold.co/600x400/141414/00d4ff?text=Menu+Digital+Oscuro" 
+                             alt="Plantilla menú digital oscuro" 
+                             class="desktop-plantilla-imagen">
+                    </div>
+                    <div class="desktop-plantilla-info">
+                        <span class="desktop-plantilla-tag">Restaurantes</span>
+                        <h3 class="desktop-plantilla-nombre">Menú Digital Oscuro</h3>
+                        <p class="desktop-plantilla-descripcion">Carta QR con categorías desplegables, fotos de platos y botón de pedido por WhatsApp.</p>
+                        <p class="desktop-plantilla-precio">S/ 299</p>
+                        <div class="desktop-plantilla-botones">
+                            <a href="#desktop-formulario-compra" class="desktop-plantilla-boton desktop-plantilla-boton-primario">Comprar plantilla</a>
+                            <a href="#desktop-formulario-personalizar" class="desktop-plantilla-boton desktop-plantilla-boton-secundario">Personalizar</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="desktop-plantilla-tarjeta">
+                    <div class="desktop-plantilla-imagen-contenedor">
+                        <img src="https://placehold.co/600x400/141414/00d4ff?text=Barberia+Retro+Style" 
+                             alt="Plantilla barbería retro style" 
+                             class="desktop-plantilla-imagen">
+                    </div>
+                    <div class="desktop-plantilla-info">
+                        <span class="desktop-plantilla-tag">Restaurantes</span>
+                        <h3 class="desktop-plantilla-nombre">Barbería Retro Style</h3>
+                        <p class="desktop-plantilla-descripcion">Estética vintage con servicios, precios, galería de cortes y reserva de citas.</p>
+                        <p class="desktop-plantilla-precio">S/ 329</p>
+                        <div class="desktop-plantilla-botones">
+                            <a href="#desktop-formulario-compra" class="desktop-plantilla-boton desktop-plantilla-boton-primario">Comprar plantilla</a>
+                            <a href="#desktop-formulario-personalizar" class="desktop-plantilla-boton desktop-plantilla-boton-secundario">Personalizar</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <!-- CATEGORIA: PROFESIONALES -->
+            <div class="desktop-plantillas-categoria" id="desktop-categoria-profesionales">
+                <article class="desktop-plantilla-tarjeta">
+                    <div class="desktop-plantilla-imagen-contenedor">
+                        <img src="https://placehold.co/600x400/141414/7c3aed?text=CV+Profesional+Minimal" 
+                             alt="Plantilla CV profesional minimal" 
+                             class="desktop-plantilla-imagen">
+                    </div>
+                    <div class="desktop-plantilla-info">
+                        <span class="desktop-plantilla-tag">Profesionales</span>
+                        <h3 class="desktop-plantilla-nombre">CV Profesional Minimal</h3>
+                        <p class="desktop-plantilla-descripcion">Perfil elegante para abogados, arquitectos o consultores. Timeline de experiencia.</p>
+                        <p class="desktop-plantilla-precio">S/ 349</p>
+                        <div class="desktop-plantilla-botones">
+                            <a href="#desktop-formulario-compra" class="desktop-plantilla-boton desktop-plantilla-boton-primario">Comprar plantilla</a>
+                            <a href="#desktop-formulario-personalizar" class="desktop-plantilla-boton desktop-plantilla-boton-secundario">Personalizar</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="desktop-plantilla-tarjeta">
+                    <div class="desktop-plantilla-imagen-contenedor">
+                        <img src="https://placehold.co/600x400/141414/7c3aed?text=Portafolio+Fotografo+Dark" 
+                             alt="Plantilla portafolio fotógrafo dark" 
+                             class="desktop-plantilla-imagen">
+                    </div>
+                    <div class="desktop-plantilla-info">
+                        <span class="desktop-plantilla-tag">Profesionales</span>
+                        <h3 class="desktop-plantilla-nombre">Portafolio Fotógrafo Dark</h3>
+                        <p class="desktop-plantilla-descripcion">Galería masonry, categorías por sesión y contacto. Fondo oscuro que resalta fotos.</p>
+                        <p class="desktop-plantilla-precio">S/ 379</p>
+                        <div class="desktop-plantilla-botones">
+                            <a href="#desktop-formulario-compra" class="desktop-plantilla-boton desktop-plantilla-boton-primario">Comprar plantilla</a>
+                            <a href="#desktop-formulario-personalizar" class="desktop-plantilla-boton desktop-plantilla-boton-secundario">Personalizar</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <!-- CATEGORIA: EVENTOS -->
+            <div class="desktop-plantillas-categoria" id="desktop-categoria-eventos">
+                <article class="desktop-plantilla-tarjeta">
+                    <div class="desktop-plantilla-imagen-contenedor">
+                        <img src="https://placehold.co/600x400/141414/00d4ff?text=Landing+Evento+Elegante" 
+                             alt="Plantilla landing evento elegante" 
+                             class="desktop-plantilla-imagen">
+                    </div>
+                    <div class="desktop-plantilla-info">
+                        <span class="desktop-plantilla-tag">Eventos</span>
+                        <h3 class="desktop-plantilla-nombre">Landing Evento Elegante</h3>
+                        <p class="desktop-plantilla-descripcion">Cuenta regresiva, galería, RSVP y mapa. Perfecto para bodas o lanzamientos.</p>
+                        <p class="desktop-plantilla-precio">S/ 279</p>
+                        <div class="desktop-plantilla-botones">
+                            <a href="#desktop-formulario-compra" class="desktop-plantilla-boton desktop-plantilla-boton-primario">Comprar plantilla</a>
+                            <a href="#desktop-formulario-personalizar" class="desktop-plantilla-boton desktop-plantilla-boton-secundario">Personalizar</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <!-- CATEGORIA: E-COMMERCE -->
+            <div class="desktop-plantillas-categoria" id="desktop-categoria-ecommerce">
+                <article class="desktop-plantilla-tarjeta">
+                    <div class="desktop-plantilla-imagen-contenedor">
+                        <img src="https://placehold.co/600x400/141414/7c3aed?text=Catalogo+WhatsApp+Shop" 
+                             alt="Plantilla catálogo WhatsApp shop" 
+                             class="desktop-plantilla-imagen">
+                    </div>
+                    <div class="desktop-plantilla-info">
+                        <span class="desktop-plantilla-tag">E-Commerce</span>
+                        <h3 class="desktop-plantilla-nombre">Catálogo WhatsApp Shop</h3>
+                        <p class="desktop-plantilla-descripcion">Grid de productos, filtros y botón "Pedir por WhatsApp" en cada item.</p>
+                        <p class="desktop-plantilla-precio">S/ 499</p>
+                        <div class="desktop-plantilla-botones">
+                            <a href="#desktop-formulario-compra" class="desktop-plantilla-boton desktop-plantilla-boton-primario">Comprar plantilla</a>
+                            <a href="#desktop-formulario-personalizar" class="desktop-plantilla-boton desktop-plantilla-boton-secundario">Personalizar</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+        </section>
+
+
+        <!-- ============================================
+             SECCION: FORMULARIO COMPRA RAPIDA DESKTOP
+             Propósito: Formulario específico para quien 
+             quiere comprar una plantilla tal cual.
+             Se muestra con :target al hacer clic en 
+             "Comprar plantilla".
+             ============================================ -->
+        <section class="desktop-formulario-seccion" id="desktop-formulario-compra">
+            <div class="desktop-formulario-caja">
+                <h2 class="desktop-formulario-titulo">Comprar plantilla</h2>
+                <p class="desktop-formulario-texto">Dinos cuál quieres y te contactamos en minutos.</p>
+                
+                <form action="https://docs.google.com/forms/d/e/FORMULARIO_COMPRA_ID/formResponse" 
+                      method="POST" 
+                      target="_blank"
+                      class="desktop-formulario-etiqueta">
+                    
+                    <div class="desktop-formulario-grupo">
+                        <label for="desktop-compra-nombre" class="desktop-formulario-label">Nombre completo</label>
+                        <input type="text" id="desktop-compra-nombre" name="entry.NOMBRE_ID" 
+                               class="desktop-formulario-input" placeholder="Ej: Juan Pérez" required>
+                    </div>
+                    
+                    <div class="desktop-formulario-grupo">
+                        <label for="desktop-compra-whatsapp" class="desktop-formulario-label">WhatsApp</label>
+                        <input type="tel" id="desktop-compra-whatsapp" name="entry.TELEFONO_ID" 
+                               class="desktop-formulario-input" placeholder="Ej: +51 999 888 777" required>
+                    </div>
+                    
+                    <div class="desktop-formulario-grupo">
+                        <label for="desktop-compra-plantilla" class="desktop-formulario-label">¿Qué plantilla deseas?</label>
+                        <select id="desktop-compra-plantilla" name="entry.PLANTILLA_ID" 
+                                class="desktop-formulario-input desktop-formulario-select" required>
+                            <option value="">Selecciona una plantilla</option>
+                            <option value="menu-digital-oscuro">Menú Digital Oscuro - S/ 299</option>
+                            <option value="cv-profesional-minimal">CV Profesional Minimal - S/ 349</option>
+                            <option value="landing-evento-elegante">Landing Evento Elegante - S/ 279</option>
+                            <option value="catalogo-whatsapp-shop">Catálogo WhatsApp Shop - S/ 499</option>
+                            <option value="barberia-retro-style">Barbería Retro Style - S/ 329</option>
+                            <option value="portafolio-fotografo-dark">Portafolio Fotógrafo Dark - S/ 379</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="desktop-formulario-boton">Solicitar compra</button>
+                    <a href="#" class="desktop-formulario-cerrar">← Volver a plantillas</a>
+                </form>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: FORMULARIO PERSONALIZAR DESKTOP
+             Propósito: Formulario para quien quiere 
+             personalizar una plantilla base.
+             Se muestra con :target al hacer clic en 
+             "Personalizar".
+             ============================================ -->
+        <section class="desktop-formulario-seccion" id="desktop-formulario-personalizar">
+            <div class="desktop-formulario-caja">
+                <h2 class="desktop-formulario-titulo">Personalizar plantilla</h2>
+                <p class="desktop-formulario-texto">Cuéntanos qué cambios necesitas y te enviamos una cotización.</p>
+                
+                <form action="https://docs.google.com/forms/d/e/FORMULARIO_PERSONALIZAR_ID/formResponse" 
+                      method="POST" 
+                      target="_blank"
+                      class="desktop-formulario-etiqueta">
+                    
+                    <div class="desktop-formulario-grupo">
+                        <label for="desktop-personalizar-nombre" class="desktop-formulario-label">Nombre completo</label>
+                        <input type="text" id="desktop-personalizar-nombre" name="entry.NOMBRE_ID" 
+                               class="desktop-formulario-input" placeholder="Ej: Juan Pérez" required>
+                    </div>
+                    
+                    <div class="desktop-formulario-grupo">
+                        <label for="desktop-personalizar-whatsapp" class="desktop-formulario-label">WhatsApp</label>
+                        <input type="tel" id="desktop-personalizar-whatsapp" name="entry.TELEFONO_ID" 
+                               class="desktop-formulario-input" placeholder="Ej: +51 999 888 777" required>
+                    </div>
+                    
+                    <div class="desktop-formulario-grupo">
+                        <label for="desktop-personalizar-plantilla" class="desktop-formulario-label">¿Qué plantilla te interesa?</label>
+                        <select id="desktop-personalizar-plantilla" name="entry.PLANTILLA_ID" 
+                                class="desktop-formulario-input desktop-formulario-select" required>
+                            <option value="">Selecciona una base</option>
+                            <option value="menu-digital-oscuro">Menú Digital Oscuro</option>
+                            <option value="cv-profesional-minimal">CV Profesional Minimal</option>
+                            <option value="landing-evento-elegante">Landing Evento Elegante</option>
+                            <option value="catalogo-whatsapp-shop">Catálogo WhatsApp Shop</option>
+                            <option value="barberia-retro-style">Barbería Retro Style</option>
+                            <option value="portafolio-fotografo-dark">Portafolio Fotógrafo Dark</option>
+                            <option value="otra">Otra (especificar abajo)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="desktop-formulario-grupo">
+                        <label for="desktop-personalizar-detalles" class="desktop-formulario-label">¿Qué cambios necesitas?</label>
+                        <textarea id="desktop-personalizar-detalles" name="entry.DETALLES_ID" 
+                                  class="desktop-formulario-textarea" rows="5" 
+                                  placeholder="Ej: Quiero cambiar los colores a azul y dorado, agregar una sección de testimonios y un formulario de reservas..."
+                                  required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="desktop-formulario-boton">Pedir cotización</button>
+                    <a href="#" class="desktop-formulario-cerrar">← Volver a plantillas</a>
+                </form>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: FOOTER DESKTOP
+             ============================================ -->
+        <footer class="desktop-footer">
+            <div class="desktop-footer-interno">
+                <div class="desktop-footer-columna">
+                    <div class="desktop-footer-logo">
+                        <span class="desktop-footer-logo-icono">&lt;/&gt;</span>
+                        <span class="desktop-footer-logo-texto">STUDIO WEB</span>
+                    </div>
+                    <p class="desktop-footer-frase">Código limpio, resultados claros.</p>
+                </div>
+                <div class="desktop-footer-columna">
+                    <h4 class="desktop-footer-titulo-columna">Navegación</h4>
+                    <nav class="desktop-footer-links">
+                        <a href="index.html" class="desktop-footer-link">Inicio</a>
+                        <a href="plantillas.html" class="desktop-footer-link">Plantillas</a>
+                        <a href="servicios.html" class="desktop-footer-link">Servicios</a>
+                        <a href="nosotros.html" class="desktop-footer-link">Nosotros</a>
+                    </nav>
+                </div>
+                <div class="desktop-footer-columna">
+                    <h4 class="desktop-footer-titulo-columna">Servicios</h4>
+                    <nav class="desktop-footer-links">
+                        <a href="plantillas.html" class="desktop-footer-link">Plantillas web</a>
+                        <a href="#desktop-formulario-personalizar" class="desktop-footer-link">Personalización</a>
+                        <a href="servicios.html#mejorar" class="desktop-footer-link">Mejoras</a>
+                        <a href="servicios.html#contratos" class="desktop-footer-link">Contratos</a>
+                    </nav>
+                </div>
+                <div class="desktop-footer-columna">
+                    <h4 class="desktop-footer-titulo-columna">Contacto</h4>
+                    <p class="desktop-footer-contacto">
+                        <span>WhatsApp: +51 999 000 000</span>
+                        <span>Email: hola@studioweb.pe</span>
+                    </p>
+                    <div class="desktop-footer-redes">
+                        <a href="#" class="desktop-footer-red" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="desktop-footer-red" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="desktop-footer-red" aria-label="TikTok">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="desktop-footer-red" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="desktop-footer-red" aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="desktop-footer-copyright">
+                <p>© 2026 STUDIO WEB. Todos los derechos reservados.</p>
+                <a href="#" class="desktop-footer-politica">Política de privacidad</a>
+            </div>
+        </footer>
+
+
+    </div>
+    <!-- ########################## FIN VERSION DESKTOP ########################## -->
+
+
+
+
+
+    <!-- ######################################################################################### -->
+    <!-- ## VERSION TABLET                                                                      ## -->
+    <!-- ######################################################################################### -->
+    <div class="version-tablet">
+
+
+        <!-- ============================================
+             SECCION: NAVEGACION PRINCIPAL TABLET
+             ============================================ -->
+        <header class="tablet-nav-contenedor">
+            <div class="tablet-nav-interno">
+                <a href="index.html" class="tablet-nav-logo">
+                    <span class="tablet-nav-logo-icono">&lt;/&gt;</span>
+                    <span class="tablet-nav-logo-texto">STUDIO WEB</span>
+                </a>
+                <nav class="tablet-nav-menu">
+                    <a href="index.html" class="tablet-nav-link">Inicio</a>
+                    <a href="plantillas.html" class="tablet-nav-link tablet-nav-activo">Plantillas</a>
+                    <a href="servicios.html" class="tablet-nav-link">Servicios</a>
+                    <a href="nosotros.html" class="tablet-nav-link">Nosotros</a>
+                </nav>
+            </div>
+        </header>
+
+
+        <!-- ============================================
+             SECCION: HERO PLANTILLAS TABLET
+             ============================================ -->
+        <section class="tablet-hero-plantillas">
+            <div class="tablet-hero-plantillas-contenido">
+                <h1 class="tablet-hero-plantillas-titulo">Elige tu base</h1>
+                <p class="tablet-hero-plantillas-subtitulo">
+                    Plantillas listas para usar o personalizamos hasta el último detalle.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: COMPARATIVO TABLET
+             ============================================ -->
+        <section class="tablet-comparativo">
+            <div class="tablet-comparativo-grid">
+                <article class="tablet-comparativo-tarjeta">
+                    <div class="tablet-comparativo-icono">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/>
+                            <polyline points="13 2 13 9 20 9"/>
+                        </svg>
+                    </div>
+                    <h2 class="tablet-comparativo-titulo">Plantilla lista</h2>
+                    <p class="tablet-comparativo-texto">Eliges un diseño probado, lo configuramos con tus datos. Entrega en 24-48h.</p>
+                    <ul class="tablet-comparativo-lista">
+                        <li class="tablet-comparativo-item">✓ Más económico</li>
+                        <li class="tablet-comparativo-item">✓ Entrega rápida</li>
+                        <li class="tablet-comparativo-item">✓ Cambios de color y texto</li>
+                    </ul>
+                    <p class="tablet-comparativo-precio">Desde S/ 279</p>
+                </article>
+                <article class="tablet-comparativo-tarjeta tablet-comparativo-destacado">
+                    <div class="tablet-comparativo-icono">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 20h9"/>
+                            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                        </svg>
+                    </div>
+                    <h2 class="tablet-comparativo-titulo">Personalizada</h2>
+                    <p class="tablet-comparativo-texto">Partimos de una base y la transformamos. Layouts únicos y secciones a medida.</p>
+                    <ul class="tablet-comparativo-lista">
+                        <li class="tablet-comparativo-item">✓ Diseño único</li>
+                        <li class="tablet-comparativo-item">✓ Secciones a medida</li>
+                        <li class="tablet-comparativo-item">✓ Soporte post-entrega</li>
+                    </ul>
+                    <p class="tablet-comparativo-precio">Cotización personalizada</p>
+                </article>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: FILTROS TABLET
+             ============================================ -->
+        <section class="tablet-filtros">
+            <h2 class="tablet-filtros-titulo">Explora por categoría</h2>
+            <nav class="tablet-filtros-menu">
+                <a href="#tablet-categoria-todos" class="tablet-filtros-boton tablet-filtros-activo">Todos</a>
+                <a href="#tablet-categoria-restaurantes" class="tablet-filtros-boton">Restaurantes</a>
+                <a href="#tablet-categoria-profesionales" class="tablet-filtros-boton">Profesionales</a>
+                <a href="#tablet-categoria-eventos" class="tablet-filtros-boton">Eventos</a>
+                <a href="#tablet-categoria-ecommerce" class="tablet-filtros-boton">E-Commerce</a>
+            </nav>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: GRID DE PLANTILLAS TABLET
+             Layout: 2 columnas.
+             ============================================ -->
+        <section class="tablet-plantillas-grid">
+            
+            <div class="tablet-plantillas-categoria" id="tablet-categoria-todos">
+                <article class="tablet-plantilla-tarjeta">
+                    <div class="tablet-plantilla-imagen-contenedor">
+                        <img src="https://placehold.co/500x350/141414/00d4ff?text=Menu+Digital+Oscuro" 
+                             alt="Plantilla menú digital oscuro" class="tablet-plantilla-imagen">
+                    </div>
+                    <div class="tablet-plantilla-info">
+                        <span class="tablet-plantilla-tag">Restaurantes</span>
+                        <h3 class="tablet-plantilla-nombre">Menú Digital Oscuro</h3>
+                        <p class="tablet-plantilla-descripcion">Carta QR con categorías desplegables y pedido por WhatsApp.</p>
+                        <p class="tablet-plantilla-precio">S/ 299</p>
+                        <div class="tablet-plantilla-botones">
+                            <a href="#tablet-formulario-compra" class="tablet-plantilla-boton tablet-plantilla-boton-primario">Comprar</a>
+                            <a href="#tablet-formulario-personalizar" class="tablet-plantilla-boton tablet-plantilla-boton-secundario">Personalizar</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="tablet-plantilla-tarjeta">
+                    <div class="tablet-plantilla-imagen-contenedor">
+                        <img src="https://placehold.co/500x350/141414/7c3aed?text=CV+Profesional+Minimal" 
+                             alt="Plantilla CV profesional minimal" class="tablet-plantilla-imagen">
+                    </div>
+                    <div class="tablet-plantilla-info">
+                        <span class="tablet-plantilla-tag">Profesionales</span>
+                        <h3 class="tablet-plantilla-nombre">CV Profesional Minimal</h3>
+                        <p class="tablet-plantilla-descripcion">Perfil elegante con timeline de experiencia.</p>
+                        <p class="tablet-plantilla-precio">S/ 349</p>
+                        <div class="tablet-plantilla-botones">
+                            <a href="#tablet-formulario-compra" class="tablet-plantilla-boton tablet-plantilla-boton-primario">Comprar</a>
+                            <a href="#tablet-formulario-personalizar" class="tablet-plantilla-boton tablet-plantilla-boton-secundario">Personalizar</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="tablet-plantilla-tarjeta">
+                    <div class="tablet-plantilla-imagen-contenedor">
+                        <img src="https://placehold.co/500x350/141414/00d4ff?text=Landing+Evento" 
+                             alt="Plantilla landing evento" class="tablet-plantilla-imagen">
+                    </div>
+                    <div class="tablet-plantilla-info">
+                        <span class="tablet-plantilla-tag">Eventos</span>
+                        <h3 class="tablet-plantilla-nombre">Landing Evento Elegante</h3>
+                        <p class="tablet-plantilla-descripcion">Cuenta regresiva, galería y RSVP.</p>
+                        <p class="tablet-plantilla-precio">S/ 279</p>
+                        <div class="tablet-plantilla-botones">
+                            <a href="#tablet-formulario-compra" class="tablet-plantilla-boton tablet-plantilla-boton-primario">Comprar</a>
+                            <a href="#tablet-formulario-personalizar" class="tablet-plantilla-boton tablet-plantilla-boton-secundario">Personalizar</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="tablet-plantilla-tarjeta">
+                    <div class="tablet-plantilla-imagen-contenedor">
+                        <img src="https://placehold.co/500x350/141414/7c3aed?text=Catalogo+WhatsApp" 
+                             alt="Plantilla catálogo WhatsApp" class="tablet-plantilla-imagen">
+                    </div>
+                    <div class="tablet-plantilla-info">
+                        <span class="tablet-plantilla-tag">E-Commerce</span>
+                        <h3 class="tablet-plantilla-nombre">Catálogo WhatsApp Shop</h3>
+                        <p class="tablet-plantilla-descripcion">Grid de productos y botón de pedido.</p>
+                        <p class="tablet-plantilla-precio">S/ 499</p>
+                        <div class="tablet-plantilla-botones">
+                            <a href="#tablet-formulario-compra" class="tablet-plantilla-boton tablet-plantilla-boton-primario">Comprar</a>
+                            <a href="#tablet-formulario-personalizar" class="tablet-plantilla-boton tablet-plantilla-boton-secundario">Personalizar</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="tablet-plantilla-tarjeta">
+                    <div class="tablet-plantilla-imagen-contenedor">
+                        <img src="https://placehold.co/500x350/141414/00d4ff?text=Barberia+Retro" 
+                             alt="Plantilla barbería retro" class="tablet-plantilla-imagen">
+                    </div>
+                    <div class="tablet-plantilla-info">
+                        <span class="tablet-plantilla-tag">Restaurantes</span>
+                        <h3 class="tablet-plantilla-nombre">Barbería Retro Style</h3>
+                        <p class="tablet-plantilla-descripcion">Estética vintage con servicios y reservas.</p>
+                        <p class="tablet-plantilla-precio">S/ 329</p>
+                        <div class="tablet-plantilla-botones">
+                            <a href="#tablet-formulario-compra" class="tablet-plantilla-boton tablet-plantilla-boton-primario">Comprar</a>
+                            <a href="#tablet-formulario-personalizar" class="tablet-plantilla-boton tablet-plantilla-boton-secundario">Personalizar</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="tablet-plantilla-tarjeta">
+                    <div class="tablet-plantilla-imagen-contenedor">
+                        <img src="https://placehold.co/500x350/141414/7c3aed?text=Portafolio+Fotografo" 
+                             alt="Plantilla portafolio fotógrafo" class="tablet-plantilla-imagen">
+                    </div>
+                    <div class="tablet-plantilla-info">
+                        <span class="tablet-plantilla-tag">Profesionales</span>
+                        <h3 class="tablet-plantilla-nombre">Portafolio Fotógrafo Dark</h3>
+                        <p class="tablet-plantilla-descripcion">Galería masonry y contacto para contrataciones.</p>
+                        <p class="tablet-plantilla-precio">S/ 379</p>
+                        <div class="tablet-plantilla-botones">
+                            <a href="#tablet-formulario-compra" class="tablet-plantilla-boton tablet-plantilla-boton-primario">Comprar</a>
+                            <a href="#tablet-formulario-personalizar" class="tablet-plantilla-boton tablet-plantilla-boton-secundario">Personalizar</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="tablet-plantillas-categoria" id="tablet-categoria-restaurantes">
+                <article class="tablet-plantilla-tarjeta">
+                    <div class="tablet-plantilla-imagen-contenedor">
+                        <img src="https://placehold.co/500x350/141414/00d4ff?text=Menu+Digital+Oscuro" 
+                             alt="Plantilla menú digital oscuro" class="tablet-plantilla-imagen">
+                    </div>
+                    <div class="tablet-plantilla-info">
+                        <span class="tablet-plantilla-tag">Restaurantes</span>
+                        <h3 class="tablet-plantilla-nombre">Menú Digital Oscuro</h3>
+                        <p class="tablet-plantilla-descripcion">Carta QR con categorías desplegables y pedido por WhatsApp.</p>
+                        <p class="tablet-plantilla-precio">S/ 299</p>
+                        <div class="tablet-plantilla-botones">
+                            <a href="#tablet-formulario-compra" class="tablet-plantilla-boton tablet-plantilla-boton-primario">Comprar</a>
+                            <a href="#tablet-formulario-personalizar" class="tablet-plantilla-boton tablet-plantilla-boton-secundario">Personalizar</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="tablet-plantilla-tarjeta">
+                    <div class="tablet-plantilla-imagen-contenedor">
+                        <img src="https://placehold.co/500x350/141414/00d4ff?text=Barberia+Retro" 
+                             alt="Plantilla barbería retro" class="tablet-plantilla-imagen">
+                    </div>
+                    <div class="tablet-plantilla-info">
+                        <span class="tablet-plantilla-tag">Restaurantes</span>
+                        <h3 class="tablet-plantilla-nombre">Barbería Retro Style</h3>
+                        <p class="tablet-plantilla-descripcion">Estética vintage con servicios y reservas.</p>
+                        <p class="tablet-plantilla-precio">S/ 329</p>
+                        <div class="tablet-plantilla-botones">
+                            <a href="#tablet-formulario-compra" class="tablet-plantilla-boton tablet-plantilla-boton-primario">Comprar</a>
+                            <a href="#tablet-formulario-personalizar" class="tablet-plantilla-boton tablet-plantilla-boton-secundario">Personalizar</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="tablet-plantillas-categoria" id="tablet-categoria-profesionales">
+                <article class="tablet-plantilla-tarjeta">
+                    <div class="tablet-plantilla-imagen-contenedor">
+                        <img src="https://placehold.co/500x350/141414/7c3aed?text=CV+Profesional+Minimal" 
+                             alt="Plantilla CV profesional minimal" class="tablet-plantilla-imagen">
+                    </div>
+                    <div class="tablet-plantilla-info">
+                        <span class="tablet-plantilla-tag">Profesionales</span>
+                        <h3 class="tablet-plantilla-nombre">CV Profesional Minimal</h3>
+                        <p class="tablet-plantilla-descripcion">Perfil elegante con timeline de experiencia.</p>
+                        <p class="tablet-plantilla-precio">S/ 349</p>
+                        <div class="tablet-plantilla-botones">
+                            <a href="#tablet-formulario-compra" class="tablet-plantilla-boton tablet-plantilla-boton-primario">Comprar</a>
+                            <a href="#tablet-formulario-personalizar" class="tablet-plantilla-boton tablet-plantilla-boton-secundario">Personalizar</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="tablet-plantilla-tarjeta">
+                    <div class="tablet-plantilla-imagen-contenedor">
+                        <img src="https://placehold.co/500x350/141414/7c3aed?text=Portafolio+Fotografo" 
+                             alt="Plantilla portafolio fotógrafo" class="tablet-plantilla-imagen">
+                    </div>
+                    <div class="tablet-plantilla-info">
+                        <span class="tablet-plantilla-tag">Profesionales</span>
+                        <h3 class="tablet-plantilla-nombre">Portafolio Fotógrafo Dark</h3>
+                        <p class="tablet-plantilla-descripcion">Galería masonry y contacto para contrataciones.</p>
+                        <p class="tablet-plantilla-precio">S/ 379</p>
+                        <div class="tablet-plantilla-botones">
+                            <a href="#tablet-formulario-compra" class="tablet-plantilla-boton tablet-plantilla-boton-primario">Comprar</a>
+                            <a href="#tablet-formulario-personalizar" class="tablet-plantilla-boton tablet-plantilla-boton-secundario">Personalizar</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="tablet-plantillas-categoria" id="tablet-categoria-eventos">
+                <article class="tablet-plantilla-tarjeta">
+                    <div class="tablet-plantilla-imagen-contenedor">
+                        <img src="https://placehold.co/500x350/141414/00d4ff?text=Landing+Evento" 
+                             alt="Plantilla landing evento" class="tablet-plantilla-imagen">
+                    </div>
+                    <div class="tablet-plantilla-info">
+                        <span class="tablet-plantilla-tag">Eventos</span>
+                        <h3 class="tablet-plantilla-nombre">Landing Evento Elegante</h3>
+                        <p class="tablet-plantilla-descripcion">Cuenta regresiva, galería y RSVP.</p>
+                        <p class="tablet-plantilla-precio">S/ 279</p>
+                        <div class="tablet-plantilla-botones">
+                            <a href="#tablet-formulario-compra" class="tablet-plantilla-boton tablet-plantilla-boton-primario">Comprar</a>
+                            <a href="#tablet-formulario-personalizar" class="tablet-plantilla-boton tablet-plantilla-boton-secundario">Personalizar</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="tablet-plantillas-categoria" id="tablet-categoria-ecommerce">
+                <article class="tablet-plantilla-tarjeta">
+                    <div class="tablet-plantilla-imagen-contenedor">
+                        <img src="https://placehold.co/500x350/141414/7c3aed?text=Catalogo+WhatsApp" 
+                             alt="Plantilla catálogo WhatsApp" class="tablet-plantilla-imagen">
+                    </div>
+                    <div class="tablet-plantilla-info">
+                        <span class="tablet-plantilla-tag">E-Commerce</span>
+                        <h3 class="tablet-plantilla-nombre">Catálogo WhatsApp Shop</h3>
+                        <p class="tablet-plantilla-descripcion">Grid de productos y botón de pedido.</p>
+                        <p class="tablet-plantilla-precio">S/ 499</p>
+                        <div class="tablet-plantilla-botones">
+                            <a href="#tablet-formulario-compra" class="tablet-plantilla-boton tablet-plantilla-boton-primario">Comprar</a>
+                            <a href="#tablet-formulario-personalizar" class="tablet-plantilla-boton tablet-plantilla-boton-secundario">Personalizar</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+        </section>
+
+
+        <!-- ============================================
+             SECCION: FORMULARIO COMPRA TABLET
+             ============================================ -->
+        <section class="tablet-formulario-seccion" id="tablet-formulario-compra">
+            <div class="tablet-formulario-caja">
+                <h2 class="tablet-formulario-titulo">Comprar plantilla</h2>
+                <p class="tablet-formulario-texto">Dinos cuál quieres y te contactamos.</p>
+                <form action="https://docs.google.com/forms/d/e/FORMULARIO_COMPRA_ID/formResponse" 
+                      method="POST" target="_blank" class="tablet-formulario-etiqueta">
+                    <div class="tablet-formulario-grupo">
+                        <label for="tablet-compra-nombre" class="tablet-formulario-label">Nombre completo</label>
+                        <input type="text" id="tablet-compra-nombre" name="entry.NOMBRE_ID" 
+                               class="tablet-formulario-input" placeholder="Ej: Juan Pérez" required>
+                    </div>
+                    <div class="tablet-formulario-grupo">
+                        <label for="tablet-compra-whatsapp" class="tablet-formulario-label">WhatsApp</label>
+                        <input type="tel" id="tablet-compra-whatsapp" name="entry.TELEFONO_ID" 
+                               class="tablet-formulario-input" placeholder="Ej: +51 999 888 777" required>
+                    </div>
+                    <div class="tablet-formulario-grupo">
+                        <label for="tablet-compra-plantilla" class="tablet-formulario-label">¿Qué plantilla deseas?</label>
+                        <select id="tablet-compra-plantilla" name="entry.PLANTILLA_ID" 
+                                class="tablet-formulario-input tablet-formulario-select" required>
+                            <option value="">Selecciona</option>
+                            <option value="menu-digital-oscuro">Menú Digital Oscuro - S/ 299</option>
+                            <option value="cv-profesional-minimal">CV Profesional Minimal - S/ 349</option>
+                            <option value="landing-evento-elegante">Landing Evento Elegante - S/ 279</option>
+                            <option value="catalogo-whatsapp-shop">Catálogo WhatsApp Shop - S/ 499</option>
+                            <option value="barberia-retro-style">Barbería Retro Style - S/ 329</option>
+                            <option value="portafolio-fotografo-dark">Portafolio Fotógrafo Dark - S/ 379</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="tablet-formulario-boton">Solicitar compra</button>
+                    <a href="#" class="tablet-formulario-cerrar">← Volver</a>
+                </form>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: FORMULARIO PERSONALIZAR TABLET
+             ============================================ -->
+        <section class="tablet-formulario-seccion" id="tablet-formulario-personalizar">
+            <div class="tablet-formulario-caja">
+                <h2 class="tablet-formulario-titulo">Personalizar plantilla</h2>
+                <p class="tablet-formulario-texto">Cuéntanos qué cambios necesitas.</p>
+                <form action="https://docs.google.com/forms/d/e/FORMULARIO_PERSONALIZAR_ID/formResponse" 
+                      method="POST" target="_blank" class="tablet-formulario-etiqueta">
+                    <div class="tablet-formulario-grupo">
+                        <label for="tablet-personalizar-nombre" class="tablet-formulario-label">Nombre completo</label>
+                        <input type="text" id="tablet-personalizar-nombre" name="entry.NOMBRE_ID" 
+                               class="tablet-formulario-input" placeholder="Ej: Juan Pérez" required>
+                    </div>
+                    <div class="tablet-formulario-grupo">
+                        <label for="tablet-personalizar-whatsapp" class="tablet-formulario-label">WhatsApp</label>
+                        <input type="tel" id="tablet-personalizar-whatsapp" name="entry.TELEFONO_ID" 
+                               class="tablet-formulario-input" placeholder="Ej: +51 999 888 777" required>
+                    </div>
+                    <div class="tablet-formulario-grupo">
+                        <label for="tablet-personalizar-plantilla" class="tablet-formulario-label">¿Qué plantilla te interesa?</label>
+                        <select id="tablet-personalizar-plantilla" name="entry.PLANTILLA_ID" 
+                                class="tablet-formulario-input tablet-formulario-select" required>
+                            <option value="">Selecciona</option>
+                            <option value="menu-digital-oscuro">Menú Digital Oscuro</option>
+                            <option value="cv-profesional-minimal">CV Profesional Minimal</option>
+                            <option value="landing-evento-elegante">Landing Evento Elegante</option>
+                            <option value="catalogo-whatsapp-shop">Catálogo WhatsApp Shop</option>
+                            <option value="barberia-retro-style">Barbería Retro Style</option>
+                            <option value="portafolio-fotografo-dark">Portafolio Fotógrafo Dark</option>
+                            <option value="otra">Otra (especificar abajo)</option>
+                        </select>
+                    </div>
+                    <div class="tablet-formulario-grupo">
+                        <label for="tablet-personalizar-detalles" class="tablet-formulario-label">¿Qué cambios necesitas?</label>
+                        <textarea id="tablet-personalizar-detalles" name="entry.DETALLES_ID" 
+                                  class="tablet-formulario-textarea" rows="4" 
+                                  placeholder="Ej: Quiero cambiar colores a azul y dorado..." required></textarea>
+                    </div>
+                    <button type="submit" class="tablet-formulario-boton">Pedir cotización</button>
+                    <a href="#" class="tablet-formulario-cerrar">← Volver</a>
+                </form>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: FOOTER TABLET
+             ============================================ -->
+        <footer class="tablet-footer">
+            <div class="tablet-footer-interno">
+                <div class="tablet-footer-columna">
+                    <div class="tablet-footer-logo">
+                        <span class="tablet-footer-logo-icono">&lt;/&gt;</span>
+                        <span class="tablet-footer-logo-texto">STUDIO WEB</span>
+                    </div>
+                    <p class="tablet-footer-frase">Código limpio, resultados claros.</p>
+                </div>
+                <div class="tablet-footer-columna">
+                    <h4 class="tablet-footer-titulo-columna">Links</h4>
+                    <nav class="tablet-footer-links">
+                        <a href="index.html" class="tablet-footer-link">Inicio</a>
+                        <a href="plantillas.html" class="tablet-footer-link">Plantillas</a>
+                        <a href="servicios.html" class="tablet-footer-link">Servicios</a>
+                        <a href="nosotros.html" class="tablet-footer-link">Nosotros</a>
+                    </nav>
+                </div>
+                <div class="tablet-footer-columna">
+                    <h4 class="tablet-footer-titulo-columna">Contacto</h4>
+                    <p class="tablet-footer-contacto">
+                        <span>WhatsApp: +51 999 000 000</span>
+                        <span>Email: hola@studioweb.pe</span>
+                    </p>
+                    <div class="tablet-footer-redes">
+                        <a href="#" class="tablet-footer-red" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="tablet-footer-red" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="tablet-footer-red" aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="tablet-footer-copyright">
+                <p>© 2026 STUDIO WEB. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+
+
+    </div>
+    <!-- ########################## FIN VERSION TABLET ########################## -->
+
+
+
+
+
+    <!-- ######################################################################################### -->
+    <!-- ## VERSION MOVIL (MOBILE)                                                              ## -->
+    <!-- ######################################################################################### -->
+    <div class="version-mobile">
+
+
+        <!-- ============================================
+             SECCION: NAVEGACION PRINCIPAL MOBILE
+             Tecnica: Checkbox hack para menu hamburguesa.
+             ============================================ -->
+        <header class="mobile-nav-contenedor">
+            <div class="mobile-nav-barra">
+                <a href="index.html" class="mobile-nav-logo">
+                    <span class="mobile-nav-logo-icono">&lt;/&gt;</span>
+                    <span class="mobile-nav-logo-texto">STUDIO WEB</span>
+                </a>
+                <label for="mobile-menu-toggle" class="mobile-menu-boton" aria-label="Abrir menu">
+                    <span class="mobile-menu-linea"></span>
+                    <span class="mobile-menu-linea"></span>
+                    <span class="mobile-menu-linea"></span>
+                </label>
+            </div>
+            <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-checkbox">
+            <nav class="mobile-nav-menu">
+                <a href="index.html" class="mobile-nav-link">Inicio</a>
+                <a href="plantillas.html" class="mobile-nav-link mobile-nav-activo">Plantillas</a>
+                <a href="servicios.html" class="mobile-nav-link">Servicios</a>
+                <a href="nosotros.html" class="mobile-nav-link">Nosotros</a>
+            </nav>
+        </header>
+
+
+        <!-- ============================================
+             SECCION: HERO PLANTILLAS MOBILE
+             ============================================ -->
+        <section class="mobile-hero-plantillas">
+            <div class="mobile-hero-plantillas-contenido">
+                <h1 class="mobile-hero-plantillas-titulo">Elige tu base</h1>
+                <p class="mobile-hero-plantillas-subtitulo">
+                    Plantillas listas para usar o personalizamos hasta el último detalle.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: COMPARATIVO MOBILE
+             Layout: Tarjetas apiladas verticalmente.
+             ============================================ -->
+        <section class="mobile-comparativo">
+            <article class="mobile-comparativo-tarjeta">
+                <div class="mobile-comparativo-icono">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/>
+                        <polyline points="13 2 13 9 20 9"/>
+                    </svg>
+                </div>
+                <h2 class="mobile-comparativo-titulo">Plantilla lista</h2>
+                <p class="mobile-comparativo-texto">Diseño probado configurado con tus datos. Entrega en 24-48h.</p>
+                <ul class="mobile-comparativo-lista">
+                    <li class="mobile-comparativo-item">✓ Más económico</li>
+                    <li class="mobile-comparativo-item">✓ Entrega rápida</li>
+                    <li class="mobile-comparativo-item">✓ Cambios de color y texto</li>
+                </ul>
+                <p class="mobile-comparativo-precio">Desde S/ 279</p>
+            </article>
+            <article class="mobile-comparativo-tarjeta mobile-comparativo-destacado">
+                <div class="mobile-comparativo-icono">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 20h9"/>
+                        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                    </svg>
+                </div>
+                <h2 class="mobile-comparativo-titulo">Personalizada</h2>
+                <p class="mobile-comparativo-texto">Transformamos una base hasta que sea única para tu marca.</p>
+                <ul class="mobile-comparativo-lista">
+                    <li class="mobile-comparativo-item">✓ Diseño único</li>
+                    <li class="mobile-comparativo-item">✓ Secciones a medida</li>
+                    <li class="mobile-comparativo-item">✓ Soporte post-entrega</li>
+                </ul>
+                <p class="mobile-comparativo-precio">Cotización personalizada</p>
+            </article>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: FILTROS MOBILE
+             Botones apilados o scroll horizontal segun CSS.
+             ============================================ -->
+        <section class="mobile-filtros">
+            <h2 class="mobile-filtros-titulo">Explora por categoría</h2>
+            <nav class="mobile-filtros-menu">
+                <a href="#mobile-categoria-todos" class="mobile-filtros-boton mobile-filtros-activo">Todos</a>
+                <a href="#mobile-categoria-restaurantes" class="mobile-filtros-boton">Restaurantes</a>
+                <a href="#mobile-categoria-profesionales" class="mobile-filtros-boton">Profesionales</a>
+                <a href="#mobile-categoria-eventos" class="mobile-filtros-boton">Eventos</a>
+                <a href="#mobile-categoria-ecommerce" class="mobile-filtros-boton">E-Commerce</a>
+            </nav>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: GRID DE PLANTILLAS MOBILE
+             Layout: 1 columna, tarjetas grandes.
+             Botones anchos para pulsar con dedo.
+             ============================================ -->
+        <section class="mobile-plantillas-grid">
+            
+            <div class="mobile-plantillas-categoria" id="mobile-categoria-todos">
+                <article class="mobile-plantilla-tarjeta">
+                    <div class="mobile-plantilla-imagen-contenedor">
+                        <img src="https://placehold.co/400x280/141414/00d4ff?text=Menu+Digital+Oscuro" 
+                             alt="Plantilla menú digital oscuro" class="mobile-plantilla-imagen">
+                    </div>
+                    <div class="mobile-plantilla-info">
+                        <span class="mobile-plantilla-tag">Restaurantes</span>
+                        <h3 class="mobile-plantilla-nombre">Menú Digital Oscuro</h3>
+                        <p class="mobile-plantilla-descripcion">Carta QR con categorías desplegables y pedido por WhatsApp.</p>
+                        <p class="mobile-plantilla-precio">S/ 299</p>
+                        <div class="mobile-plantilla-botones">
+                            <a href="#mobile-formulario-compra" class="mobile-plantilla-boton mobile-plantilla-boton-primario">Comprar plantilla</a>
+                            <a href="#mobile-formulario-personalizar" class="mobile-plantilla-boton mobile-plantilla-boton-secundario">Personalizar</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="mobile-plantilla-tarjeta">
+                    <div class="mobile-plantilla-imagen-contenedor">
+                        <img src="https://placehold.co/400x280/141414/7c3aed?text=CV+Profesional+Minimal" 
+                             alt="Plantilla CV profesional minimal" class="mobile-plantilla-imagen">
+                    </div>
+                    <div class="mobile-plantilla-info">
+                        <span class="mobile-plantilla-tag">Profesionales</span>
+                        <h3 class="mobile-plantilla-nombre">CV Profesional Minimal</h3>
+                        <p class="mobile-plantilla-descripcion">Perfil elegante con timeline de experiencia.</p>
+                        <p class="mobile-plantilla-precio">S/ 349</p>
+                        <div class="mobile-plantilla-botones">
+                            <a href="#mobile-formulario-compra" class="mobile-plantilla-boton mobile-plantilla-boton-primario">Comprar plantilla</a>
+                            <a href="#mobile-formulario-personalizar" class="mobile-plantilla-boton mobile-plantilla-boton-secundario">Personalizar</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="mobile-plantilla-tarjeta">
+                    <div class="mobile-plantilla-imagen-contenedor">
+                        <img src="https://placehold.co/400x280/141414/00d4ff?text=Landing+Evento" 
+                             alt="Plantilla landing evento" class="mobile-plantilla-imagen">
+                    </div>
+                    <div class="mobile-plantilla-info">
+                        <span class="mobile-plantilla-tag">Eventos</span>
+                        <h3 class="mobile-plantilla-nombre">Landing Evento Elegante</h3>
+                        <p class="mobile-plantilla-descripcion">Cuenta regresiva, galería y RSVP.</p>
+                        <p class="mobile-plantilla-precio">S/ 279</p>
+                        <div class="mobile-plantilla-botones">
+                            <a href="#mobile-formulario-compra" class="mobile-plantilla-boton mobile-plantilla-boton-primario">Comprar plantilla</a>
+                            <a href="#mobile-formulario-personalizar" class="mobile-plantilla-boton mobile-plantilla-boton-secundario">Personalizar</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="mobile-plantilla-tarjeta">
+                    <div class="mobile-plantilla-imagen-contenedor">
+                        <img src="https://placehold.co/400x280/141414/7c3aed?text=Catalogo+WhatsApp" 
+                             alt="Plantilla catálogo WhatsApp" class="mobile-plantilla-imagen">
+                    </div>
+                    <div class="mobile-plantilla-info">
+                        <span class="mobile-plantilla-tag">E-Commerce</span>
+                        <h3 class="mobile-plantilla-nombre">Catálogo WhatsApp Shop</h3>
+                        <p class="mobile-plantilla-descripcion">Grid de productos y botón de pedido.</p>
+                        <p class="mobile-plantilla-precio">S/ 499</p>
+                        <div class="mobile-plantilla-botones">
+                            <a href="#mobile-formulario-compra" class="mobile-plantilla-boton mobile-plantilla-boton-primario">Comprar plantilla</a>
+                            <a href="#mobile-formulario-personalizar" class="mobile-plantilla-boton mobile-plantilla-boton-secundario">Personalizar</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="mobile-plantilla-tarjeta">
+                    <div class="mobile-plantilla-imagen-contenedor">
+                        <img src="https://placehold.co/400x280/141414/00d4ff?text=Barberia+Retro" 
+                             alt="Plantilla barbería retro" class="mobile-plantilla-imagen">
+                    </div>
+                    <div class="mobile-plantilla-info">
+                        <span class="mobile-plantilla-tag">Restaurantes</span>
+                        <h3 class="mobile-plantilla-nombre">Barbería Retro Style</h3>
+                        <p class="mobile-plantilla-descripcion">Estética vintage con servicios y reservas.</p>
+                        <p class="mobile-plantilla-precio">S/ 329</p>
+                        <div class="mobile-plantilla-botones">
+                            <a href="#mobile-formulario-compra" class="mobile-plantilla-boton mobile-plantilla-boton-primario">Comprar plantilla</a>
+                            <a href="#mobile-formulario-personalizar" class="mobile-plantilla-boton mobile-plantilla-boton-secundario">Personalizar</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="mobile-plantilla-tarjeta">
+                    <div class="mobile-plantilla-imagen-contenedor">
+                        <img src="https://placehold.co/400x280/141414/7c3aed?text=Portafolio+Fotografo" 
+                             alt="Plantilla portafolio fotógrafo" class="mobile-plantilla-imagen">
+                    </div>
+                    <div class="mobile-plantilla-info">
+                        <span class="mobile-plantilla-tag">Profesionales</span>
+                        <h3 class="mobile-plantilla-nombre">Portafolio Fotógrafo Dark</h3>
+                        <p class="mobile-plantilla-descripcion">Galería masonry y contacto para contrataciones.</p>
+                        <p class="mobile-plantilla-precio">S/ 379</p>
+                        <div class="mobile-plantilla-botones">
+                            <a href="#mobile-formulario-compra" class="mobile-plantilla-boton mobile-plantilla-boton-primario">Comprar plantilla</a>
+                            <a href="#mobile-formulario-personalizar" class="mobile-plantilla-boton mobile-plantilla-boton-secundario">Personalizar</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="mobile-plantillas-categoria" id="mobile-categoria-restaurantes">
+                <article class="mobile-plantilla-tarjeta">
+                    <div class="mobile-plantilla-imagen-contenedor">
+                        <img src="https://placehold.co/400x280/141414/00d4ff?text=Menu+Digital+Oscuro" 
+                             alt="Plantilla menú digital oscuro" class="mobile-plantilla-imagen">
+                    </div>
+                    <div class="mobile-plantilla-info">
+                        <span class="mobile-plantilla-tag">Restaurantes</span>
+                        <h3 class="mobile-plantilla-nombre">Menú Digital Oscuro</h3>
+                        <p class="mobile-plantilla-descripcion">Carta QR con categorías desplegables y pedido por WhatsApp.</p>
+                        <p class="mobile-plantilla-precio">S/ 299</p>
+                        <div class="mobile-plantilla-botones">
+                            <a href="#mobile-formulario-compra" class="mobile-plantilla-boton mobile-plantilla-boton-primario">Comprar plantilla</a>
+                            <a href="#mobile-formulario-personalizar" class="mobile-plantilla-boton mobile-plantilla-boton-secundario">Personalizar</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="mobile-plantilla-tarjeta">
+                    <div class="mobile-plantilla-imagen-contenedor">
+                        <img src="https://placehold.co/400x280/141414/00d4ff?text=Barberia+Retro" 
+                             alt="Plantilla barbería retro" class="mobile-plantilla-imagen">
+                    </div>
+                    <div class="mobile-plantilla-info">
+                        <span class="mobile-plantilla-tag">Restaurantes</span>
+                        <h3 class="mobile-plantilla-nombre">Barbería Retro Style</h3>
+                        <p class="mobile-plantilla-descripcion">Estética vintage con servicios y reservas.</p>
+                        <p class="mobile-plantilla-precio">S/ 329</p>
+                        <div class="mobile-plantilla-botones">
+                            <a href="#mobile-formulario-compra" class="mobile-plantilla-boton mobile-plantilla-boton-primario">Comprar plantilla</a>
+                            <a href="#mobile-formulario-personalizar" class="mobile-plantilla-boton mobile-plantilla-boton-secundario">Personalizar</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="mobile-plantillas-categoria" id="mobile-categoria-profesionales">
+                <article class="mobile-plantilla-tarjeta">
+                    <div class="mobile-plantilla-imagen-contenedor">
+                        <img src="https://placehold.co/400x280/141414/7c3aed?text=CV+Profesional+Minimal" 
+                             alt="Plantilla CV profesional minimal" class="mobile-plantilla-imagen">
+                    </div>
+                    <div class="mobile-plantilla-info">
+                        <span class="mobile-plantilla-tag">Profesionales</span>
+                        <h3 class="mobile-plantilla-nombre">CV Profesional Minimal</h3>
+                        <p class="mobile-plantilla-descripcion">Perfil elegante con timeline de experiencia.</p>
+                        <p class="mobile-plantilla-precio">S/ 349</p>
+                        <div class="mobile-plantilla-botones">
+                            <a href="#mobile-formulario-compra" class="mobile-plantilla-boton mobile-plantilla-boton-primario">Comprar plantilla</a>
+                            <a href="#mobile-formulario-personalizar" class="mobile-plantilla-boton mobile-plantilla-boton-secundario">Personalizar</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="mobile-plantilla-tarjeta">
+                    <div class="mobile-plantilla-imagen-contenedor">
+                        <img src="https://placehold.co/400x280/141414/7c3aed?text=Portafolio+Fotografo" 
+                             alt="Plantilla portafolio fotógrafo" class="mobile-plantilla-imagen">
+                    </div>
+                    <div class="mobile-plantilla-info">
+                        <span class="mobile-plantilla-tag">Profesionales</span>
+                        <h3 class="mobile-plantilla-nombre">Portafolio Fotógrafo Dark</h3>
+                        <p class="mobile-plantilla-descripcion">Galería masonry y contacto para contrataciones.</p>
+                        <p class="mobile-plantilla-precio">S/ 379</p>
+                        <div class="mobile-plantilla-botones">
+                            <a href="#mobile-formulario-compra" class="mobile-plantilla-boton mobile-plantilla-boton-primario">Comprar plantilla</a>
+                            <a href="#mobile-formulario-personalizar" class="mobile-plantilla-boton mobile-plantilla-boton-secundario">Personalizar</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="mobile-plantillas-categoria" id="mobile-categoria-eventos">
+                <article class="mobile-plantilla-tarjeta">
+                    <div class="mobile-plantilla-imagen-contenedor">
+                        <img src="https://placehold.co/400x280/141414/00d4ff?text=Landing+Evento" 
+                             alt="Plantilla landing evento" class="mobile-plantilla-imagen">
+                    </div>
+                    <div class="mobile-plantilla-info">
+                        <span class="mobile-plantilla-tag">Eventos</span>
+                        <h3 class="mobile-plantilla-nombre">Landing Evento Elegante</h3>
+                        <p class="mobile-plantilla-descripcion">Cuenta regresiva, galería y RSVP.</p>
+                        <p class="mobile-plantilla-precio">S/ 279</p>
+                        <div class="mobile-plantilla-botones">
+                            <a href="#mobile-formulario-compra" class="mobile-plantilla-boton mobile-plantilla-boton-primario">Comprar plantilla</a>
+                            <a href="#mobile-formulario-personalizar" class="mobile-plantilla-boton mobile-plantilla-boton-secundario">Personalizar</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="mobile-plantillas-categoria" id="mobile-categoria-ecommerce">
+                <article class="mobile-plantilla-tarjeta">
+                    <div class="mobile-plantilla-imagen-contenedor">
+                        <img src="https://placehold.co/400x280/141414/7c3aed?text=Catalogo+WhatsApp" 
+                             alt="Plantilla catálogo WhatsApp" class="mobile-plantilla-imagen">
+                    </div>
+                    <div class="mobile-plantilla-info">
+                        <span class="mobile-plantilla-tag">E-Commerce</span>
+                        <h3 class="mobile-plantilla-nombre">Catálogo WhatsApp Shop</h3>
+                        <p class="mobile-plantilla-descripcion">Grid de productos y botón de pedido.</p>
+                        <p class="mobile-plantilla-precio">S/ 499</p>
+                        <div class="mobile-plantilla-botones">
+                            <a href="#mobile-formulario-compra" class="mobile-plantilla-boton mobile-plantilla-boton-primario">Comprar plantilla</a>
+                            <a href="#mobile-formulario-personalizar" class="mobile-plantilla-boton mobile-plantilla-boton-secundario">Personalizar</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+        </section>
+
+
+        <!-- ============================================
+             SECCION: FORMULARIO COMPRA MOBILE
+             ============================================ -->
+        <section class="mobile-formulario-seccion" id="mobile-formulario-compra">
+            <div class="mobile-formulario-caja">
+                <h2 class="mobile-formulario-titulo">Comprar plantilla</h2>
+                <p class="mobile-formulario-texto">Dinos cuál quieres y te contactamos.</p>
+                <form action="https://docs.google.com/forms/d/e/FORMULARIO_COMPRA_ID/formResponse" 
+                      method="POST" target="_blank" class="mobile-formulario-etiqueta">
+                    <div class="mobile-formulario-grupo">
+                        <label for="mobile-compra-nombre" class="mobile-formulario-label">Nombre completo</label>
+                        <input type="text" id="mobile-compra-nombre" name="entry.NOMBRE_ID" 
+                               class="mobile-formulario-input" placeholder="Ej: Juan Pérez" required>
+                    </div>
+                    <div class="mobile-formulario-grupo">
+                        <label for="mobile-compra-whatsapp" class="mobile-formulario-label">WhatsApp</label>
+                        <input type="tel" id="mobile-compra-whatsapp" name="entry.TELEFONO_ID" 
+                               class="mobile-formulario-input" placeholder="Ej: +51 999 888 777" required>
+                    </div>
+                    <div class="mobile-formulario-grupo">
+                        <label for="mobile-compra-plantilla" class="mobile-formulario-label">¿Qué plantilla deseas?</label>
+                        <select id="mobile-compra-plantilla" name="entry.PLANTILLA_ID" 
+                                class="mobile-formulario-input mobile-formulario-select" required>
+                            <option value="">Selecciona</option>
+                            <option value="menu-digital-oscuro">Menú Digital Oscuro - S/ 299</option>
+                            <option value="cv-profesional-minimal">CV Profesional Minimal - S/ 349</option>
+                            <option value="landing-evento-elegante">Landing Evento Elegante - S/ 279</option>
+                            <option value="catalogo-whatsapp-shop">Catálogo WhatsApp Shop - S/ 499</option>
+                            <option value="barberia-retro-style">Barbería Retro Style - S/ 329</option>
+                            <option value="portafolio-fotografo-dark">Portafolio Fotógrafo Dark - S/ 379</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="mobile-formulario-boton">Solicitar compra</button>
+                    <a href="#" class="mobile-formulario-cerrar">← Volver a plantillas</a>
+                </form>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: FORMULARIO PERSONALIZAR MOBILE
+             ============================================ -->
+        <section class="mobile-formulario-seccion" id="mobile-formulario-personalizar">
+            <div class="mobile-formulario-caja">
+                <h2 class="mobile-formulario-titulo">Personalizar plantilla</h2>
+                <p class="mobile-formulario-texto">Cuéntanos qué cambios necesitas.</p>
+                <form action="https://docs.google.com/forms/d/e/FORMULARIO_PERSONALIZAR_ID/formResponse" 
+                      method="POST" target="_blank" class="mobile-formulario-etiqueta">
+                    <div class="mobile-formulario-grupo">
+                        <label for="mobile-personalizar-nombre" class="mobile-formulario-label">Nombre completo</label>
+                        <input type="text" id="mobile-personalizar-nombre" name="entry.NOMBRE_ID" 
+                               class="mobile-formulario-input" placeholder="Ej: Juan Pérez" required>
+                    </div>
+                    <div class="mobile-formulario-grupo">
+                        <label for="mobile-personalizar-whatsapp" class="mobile-formulario-label">WhatsApp</label>
+                        <input type="tel" id="mobile-personalizar-whatsapp" name="entry.TELEFONO_ID" 
+                               class="mobile-formulario-input" placeholder="Ej: +51 999 888 777" required>
+                    </div>
+                    <div class="mobile-formulario-grupo">
+                        <label for="mobile-personalizar-plantilla" class="mobile-formulario-label">¿Qué plantilla te interesa?</label>
+                        <select id="mobile-personalizar-plantilla" name="entry.PLANTILLA_ID" 
+                                class="mobile-formulario-input mobile-formulario-select" required>
+                            <option value="">Selecciona</option>
+                            <option value="menu-digital-oscuro">Menú Digital Oscuro</option>
+                            <option value="cv-profesional-minimal">CV Profesional Minimal</option>
+                            <option value="landing-evento-elegante">Landing Evento Elegante</option>
+                            <option value="catalogo-whatsapp-shop">Catálogo WhatsApp Shop</option>
+                            <option value="barberia-retro-style">Barbería Retro Style</option>
+                            <option value="portafolio-fotografo-dark">Portafolio Fotógrafo Dark</option>
+                            <option value="otra">Otra (especificar abajo)</option>
+                        </select>
+                    </div>
+                    <div class="mobile-formulario-grupo">
+                        <label for="mobile-personalizar-detalles" class="mobile-formulario-label">¿Qué cambios necesitas?</label>
+                        <textarea id="mobile-personalizar-detalles" name="entry.DETALLES_ID" 
+                                  class="mobile-formulario-textarea" rows="4" 
+                                  placeholder="Ej: Quiero cambiar colores..." required></textarea>
+                    </div>
+                    <button type="submit" class="mobile-formulario-boton">Pedir cotización</button>
+                    <a href="#" class="mobile-formulario-cerrar">← Volver a plantillas</a>
+                </form>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: FOOTER MOBILE
+             ============================================ -->
+        <footer class="mobile-footer">
+            <div class="mobile-footer-interno">
+                <div class="mobile-footer-marca">
+                    <span class="mobile-footer-logo-icono">&lt;/&gt;</span>
+                    <span class="mobile-footer-logo-texto">STUDIO WEB</span>
+                    <p class="mobile-footer-frase">Código limpio, resultados claros.</p>
+                </div>
+                <nav class="mobile-footer-links">
+                    <a href="index.html" class="mobile-footer-link">Inicio</a>
+                    <a href="plantillas.html" class="mobile-footer-link">Plantillas</a>
+                    <a href="servicios.html" class="mobile-footer-link">Servicios</a>
+                    <a href="nosotros.html" class="mobile-footer-link">Nosotros</a>
+                </nav>
+                <div class="mobile-footer-contacto">
+                    <a href="https://wa.me/51999000000" class="mobile-footer-whatsapp">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                        </svg>
+                        Escribir por WhatsApp
+                    </a>
+                    <p class="mobile-footer-email">hola@studioweb.pe</p>
+                </div>
+                <div class="mobile-footer-redes">
+                    <a href="#" class="mobile-footer-red" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="mobile-footer-red" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="mobile-footer-red" aria-label="TikTok">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="mobile-footer-copyright">
+                <p>© 2026 STUDIO WEB.</p>
+                <a href="#" class="mobile-footer-politica">Política de privacidad</a>
+            </div>
+        </footer>
+
+
+    </div>
+    <!-- ########################## FIN VERSION MOBILE ########################## -->
+
+
+</body>
+</html>

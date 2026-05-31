@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- ============================================
+         CONFIGURACION BASICA DEL DOCUMENTO
+         ============================================ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - STUDIO WEB</title>
+    
+    <!-- ============================================
+         ENLACES A HOJAS DE ESTILO EXTERNAS
+         ============================================ -->
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="editor.css">
+</head>
+<body>
+
+    <!-- ######################################################################################### -->
+    <!-- ## VERSION ESCRITORIO (DESKTOP)                                                        ## -->
+    <!-- ######################################################################################### -->
+    <div class="version-desktop">
+
+
+        <!-- ============================================
+             SECCION: NAVEGACION PRINCIPAL DESKTOP
+             ============================================ -->
+        <header class="desktop-nav-contenedor">
+            <div class="desktop-nav-interno">
+                <a href="index.html" class="desktop-nav-logo">
+                    <span class="desktop-nav-logo-icono">&lt;/&gt;</span>
+                    <span class="desktop-nav-logo-texto">STUDIO WEB</span>
+                </a>
+                <nav class="desktop-nav-menu">
+                    <a href="index.html" class="desktop-nav-link">Inicio</a>
+                    <a href="plantillas.html" class="desktop-nav-link">Plantillas</a>
+                    <a href="servicios.html" class="desktop-nav-link desktop-nav-activo">Servicios</a>
+                    <a href="nosotros.html" class="desktop-nav-link">Nosotros</a>
+                </nav>
+            </div>
+        </header>
+
+
+        <!-- ============================================
+             SECCION: HERO SERVICIOS DESKTOP
+             Propósito: Presentar la oferta de servicios 
+             continuos y especiales.
+             ============================================ -->
+        <section class="desktop-hero-servicios">
+            <div class="desktop-hero-servicios-contenido">
+                <h1 class="desktop-hero-servicios-titulo">Más allá de una plantilla</h1>
+                <p class="desktop-hero-servicios-subtitulo">
+                    ¿Ya tienes una web que no convence? ¿Necesitas un equipo de diseño 
+                    a tu lado por meses? Aquí tienes soluciones hechas a tu medida.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: MEJORA TU PAGINA ACTUAL DESKTOP
+             Propósito: Captar clientes con web existente.
+             Layout: 2 columnas. Izquierda: formulario.
+             Derecha: ejemplos antes/despues placeholder.
+             ============================================ -->
+        <section class="desktop-mejorar" id="desktop-mejorar">
+            <div class="desktop-mejorar-cabecera">
+                <h2 class="desktop-mejorar-titulo">¿Ya tienes una web que no convence?</h2>
+                <p class="desktop-mejorar-texto">
+                    La optimizamos por completo: más rápida, más bonita, más efectiva. 
+                    Envíanos la URL y te decimos qué podemos hacer.
+                </p>
+            </div>
+            
+            <div class="desktop-mejorar-grid">
+                
+                <!-- Columna izquierda: Formulario -->
+                <div class="desktop-mejorar-formulario-caja">
+                    <h3 class="desktop-mejorar-formulario-titulo">Solicitar revisión gratuita</h3>
+                    
+                    <form action="https://docs.google.com/forms/d/e/FORMULARIO_MEJORAR_ID/formResponse" 
+                          method="POST" 
+                          target="_blank"
+                          class="desktop-mejorar-etiqueta">
+                        
+                        <div class="desktop-mejorar-grupo">
+                            <label for="desktop-mejorar-nombre" class="desktop-mejorar-label">Nombre completo</label>
+                            <input type="text" 
+                                   id="desktop-mejorar-nombre" 
+                                   name="entry.NOMBRE_ID" 
+                                   class="desktop-mejorar-input" 
+                                   placeholder="Ej: Juan Pérez" 
+                                   required>
+                        </div>
+                        
+                        <div class="desktop-mejorar-grupo">
+                            <label for="desktop-mejorar-whatsapp" class="desktop-mejorar-label">WhatsApp</label>
+                            <input type="tel" 
+                                   id="desktop-mejorar-whatsapp" 
+                                   name="entry.TELEFONO_ID" 
+                                   class="desktop-mejorar-input" 
+                                   placeholder="Ej: +51 999 888 777" 
+                                   required>
+                        </div>
+                        
+                        <div class="desktop-mejorar-grupo">
+                            <label for="desktop-mejorar-url" class="desktop-mejorar-label">URL de tu página actual</label>
+                            <input type="url" 
+                                   id="desktop-mejorar-url" 
+                                   name="entry.URL_ID" 
+                                   class="desktop-mejorar-input" 
+                                   placeholder="Ej: https://mitienda.com" 
+                                   required>
+                        </div>
+                        
+                        <div class="desktop-mejorar-grupo">
+                            <label for="desktop-mejorar-detalles" class="desktop-mejorar-label">¿Qué te gustaría cambiar?</label>
+                            <textarea id="desktop-mejorar-detalles" 
+                                      name="entry.DETALLES_ID" 
+                                      class="desktop-mejorar-textarea" 
+                                      rows="5" 
+                                      placeholder="Ej: Se ve muy vieja, tarda en cargar, no se ve bien en celular, quiero agregar un formulario de contacto..."
+                                      required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="desktop-mejorar-boton">Enviar solicitud de revisión</button>
+                    </form>
+                </div>
+                
+                <!-- Columna derecha: Ejemplos visuales -->
+                <div class="desktop-mejorar-ejemplos">
+                    <h3 class="desktop-mejorar-ejemplos-titulo">Transformaciones reales</h3>
+                    
+                    <div class="desktop-mejorar-caso">
+                        <p class="desktop-mejorar-caso-nombre">Caso: Restaurante El Sabor</p>
+                        <div class="desktop-mejorar-caso-imagenes">
+                            <div class="desktop-mejorar-antes">
+                                <img src="https://placehold.co/400x250/333333/888888?text=ANTES:+Lenta+y+desordenada" 
+                                     alt="Antes de la mejora" 
+                                     class="desktop-mejorar-img">
+                                <span class="desktop-mejorar-etiqueta-img">Antes</span>
+                            </div>
+                            <div class="desktop-mejorar-despues">
+                                <img src="https://placehold.co/400x250/141414/00d4ff?text=DESPUES:+Rapida+y+moderna" 
+                                     alt="Después de la mejora" 
+                                     class="desktop-mejorar-img">
+                                <span class="desktop-mejorar-etiqueta-img">Después</span>
+                            </div>
+                        </div>
+                        <p class="desktop-mejorar-caso-resultado">
+                            ✓ Tiempo de carga: 8s → 1.2s &nbsp;|&nbsp; ✓ Visitas mensuales: +180%
+                        </p>
+                    </div>
+                    
+                    <div class="desktop-mejorar-caso">
+                        <p class="desktop-mejorar-caso-nombre">Caso: Clínica Dental Sonrisa</p>
+                        <div class="desktop-mejorar-caso-imagenes">
+                            <div class="desktop-mejorar-antes">
+                                <img src="https://placehold.co/400x250/333333/888888?text=ANTES:+No+responsiva" 
+                                     alt="Antes de la mejora" 
+                                     class="desktop-mejorar-img">
+                                <span class="desktop-mejorar-etiqueta-img">Antes</span>
+                            </div>
+                            <div class="desktop-mejorar-despues">
+                                <img src="https://placehold.co/400x250/141414/00d4ff?text=DESPUES:+Adaptable+y+limpia" 
+                                     alt="Después de la mejora" 
+                                     class="desktop-mejorar-img">
+                                <span class="desktop-mejorar-etiqueta-img">Después</span>
+                            </div>
+                        </div>
+                        <p class="desktop-mejorar-caso-resultado">
+                            ✓ Citas online: 0 → 35/mes &nbsp;|&nbsp; ✓ Compatible con todos los celulares
+                        </p>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: CONTRATOS MENSUALES DESKTOP
+             Propósito: Mostrar 3 planes de suscripcion.
+             Layout: 3 tarjetas horizontales.
+             ============================================ -->
+        <section class="desktop-contratos" id="desktop-contratos">
+            <div class="desktop-contratos-cabecera">
+                <h2 class="desktop-contratos-titulo">Tu diseñador web por suscripción</h2>
+                <p class="desktop-contratos-texto">
+                    Contrata nuestro equipo por tiempo definido. Ideal si lanzas productos, 
+                    haces campañas frecuentes o necesitas evolucionar tu web constantemente.
+                </p>
+            </div>
+            
+            <div class="desktop-contratos-grid">
+                
+                <!-- Plan Básico -->
+                <article class="desktop-plan-tarjeta">
+                    <div class="desktop-plan-cabecera">
+                        <h3 class="desktop-plan-nombre">Básico</h3>
+                        <p class="desktop-plan-duracion">1 mes</p>
+                        <p class="desktop-plan-precio">S/ 599</p>
+                    </div>
+                    <ul class="desktop-plan-lista">
+                        <li class="desktop-plan-item">✓ Cambios de textos e imágenes</li>
+                        <li class="desktop-plan-item">✓ 2 revisiones de diseño</li>
+                        <li class="desktop-plan-item">✓ Ajustes de colores y tipografía</li>
+                        <li class="desktop-plan-item">✓ Soporte por WhatsApp</li>
+                        <li class="desktop-plan-item desktop-plan-item-no">✗ Nuevas secciones</li>
+                        <li class="desktop-plan-item desktop-plan-item-no">✗ Rediseño completo</li>
+                    </ul>
+                    <a href="#desktop-formulario-contrato" class="desktop-plan-boton">Solicitar plan Básico</a>
+                </article>
+                
+                <!-- Plan Pro -->
+                <article class="desktop-plan-tarjeta desktop-plan-destacado">
+                    <div class="desktop-plan-cabecera">
+                        <span class="desktop-plan-recomendado">Recomendado</span>
+                        <h3 class="desktop-plan-nombre">Pro</h3>
+                        <p class="desktop-plan-duracion">3 meses</p>
+                        <p class="desktop-plan-precio">S/ 1,499</p>
+                    </div>
+                    <ul class="desktop-plan-lista">
+                        <li class="desktop-plan-item">✓ Todo lo del plan Básico</li>
+                        <li class="desktop-plan-item">✓ Rediseños parciales (1 sección/mes)</li>
+                        <li class="desktop-plan-item">✓ Nuevas páginas simples</li>
+                        <li class="desktop-plan-item">✓ Optimización de velocidad mensual</li>
+                        <li class="desktop-plan-item">✓ Soporte prioritario</li>
+                        <li class="desktop-plan-item desktop-plan-item-no">✗ Rediseño total de marca</li>
+                    </ul>
+                    <a href="#desktop-formulario-contrato" class="desktop-plan-boton desktop-plan-boton-destacado">Solicitar plan Pro</a>
+                </article>
+                
+                <!-- Plan Empresa -->
+                <article class="desktop-plan-tarjeta">
+                    <div class="desktop-plan-cabecera">
+                        <h3 class="desktop-plan-nombre">Empresa</h3>
+                        <p class="desktop-plan-duracion">6 meses</p>
+                        <p class="desktop-plan-precio">S/ 2,799</p>
+                    </div>
+                    <ul class="desktop-plan-lista">
+                        <li class="desktop-plan-item">✓ Todo lo del plan Pro</li>
+                        <li class="desktop-plan-item">✓ Rediseño completo incluido</li>
+                        <li class="desktop-plan-item">✓ Nuevas secciones ilimitadas</li>
+                        <li class="desktop-plan-item">✓ Landing pages para campañas</li>
+                        <li class="desktop-plan-item">✓ Reporte mensual de métricas</li>
+                        <li class="desktop-plan-item">✓ Atención inmediata</li>
+                    </ul>
+                    <a href="#desktop-formulario-contrato" class="desktop-plan-boton">Solicitar plan Empresa</a>
+                </article>
+                
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: FORMULARIO CONTRATO DESKTOP
+             Propósito: Formulario específico para contratar
+             planes mensuales.
+             Se muestra con :target al hacer clic en botones.
+             ============================================ -->
+        <section class="desktop-formulario-seccion" id="desktop-formulario-contrato">
+            <div class="desktop-formulario-caja">
+                <h2 class="desktop-formulario-titulo">Contratar plan de suscripción</h2>
+                <p class="desktop-formulario-texto">Dinos qué plan te interesa y te contactamos en minutos.</p>
+                
+                <form action="https://docs.google.com/forms/d/e/FORMULARIO_CONTRATO_ID/formResponse" 
+                      method="POST" 
+                      target="_blank"
+                      class="desktop-formulario-etiqueta">
+                    
+                    <div class="desktop-formulario-grupo">
+                        <label for="desktop-contrato-nombre" class="desktop-formulario-label">Nombre completo</label>
+                        <input type="text" 
+                               id="desktop-contrato-nombre" 
+                               name="entry.NOMBRE_ID" 
+                               class="desktop-formulario-input" 
+                               placeholder="Ej: Juan Pérez" 
+                               required>
+                    </div>
+                    
+                    <div class="desktop-formulario-grupo">
+                        <label for="desktop-contrato-whatsapp" class="desktop-formulario-label">WhatsApp</label>
+                        <input type="tel" 
+                               id="desktop-contrato-whatsapp" 
+                               name="entry.TELEFONO_ID" 
+                               class="desktop-formulario-input" 
+                               placeholder="Ej: +51 999 888 777" 
+                               required>
+                    </div>
+                    
+                    <div class="desktop-formulario-grupo">
+                        <label for="desktop-contrato-plan" class="desktop-formulario-label">¿Qué plan deseas?</label>
+                        <select id="desktop-contrato-plan" 
+                                name="entry.PLAN_ID" 
+                                class="desktop-formulario-input desktop-formulario-select" 
+                                required>
+                            <option value="">Selecciona un plan</option>
+                            <option value="basico-1mes">Básico - 1 mes (S/ 599)</option>
+                            <option value="pro-3meses">Pro - 3 meses (S/ 1,499)</option>
+                            <option value="empresa-6meses">Empresa - 6 meses (S/ 2,799)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="desktop-formulario-grupo">
+                        <label for="desktop-contrato-empresa" class="desktop-formulario-label">Nombre de tu empresa o proyecto</label>
+                        <input type="text" 
+                               id="desktop-contrato-empresa" 
+                               name="entry.EMPRESA_ID" 
+                               class="desktop-formulario-input" 
+                               placeholder="Ej: Tienda Virtual Perú">
+                    </div>
+                    
+                    <div class="desktop-formulario-grupo">
+                        <label for="desktop-contrato-detalles" class="desktop-formulario-label">¿Qué necesitas durante la suscripción?</label>
+                        <textarea id="desktop-contrato-detalles" 
+                                  name="entry.DETALLES_ID" 
+                                  class="desktop-formulario-textarea" 
+                                  rows="5" 
+                                  placeholder="Ej: Necesito actualizar mi catálogo mensual, crear landing pages para campañas de Facebook y mejorar la velocidad de carga..."
+                                  required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="desktop-formulario-boton">Enviar solicitud de contrato</button>
+                    <a href="#desktop-contratos" class="desktop-formulario-cerrar">← Volver a planes</a>
+                </form>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: PROCESO DE TRABAJO DESKTOP
+             Propósito: Mostrar pasos claros para generar confianza.
+             Layout: Timeline vertical con 5 pasos.
+             ============================================ -->
+        <section class="desktop-proceso">
+            <div class="desktop-proceso-cabecera">
+                <h2 class="desktop-proceso-titulo">Así trabajamos contigo</h2>
+                <p class="desktop-proceso-texto">Proceso transparente, sin sorpresas.</p>
+            </div>
+            
+            <div class="desktop-proceso-timeline">
+                
+                <!-- Paso 1 -->
+                <div class="desktop-proceso-paso">
+                    <div class="desktop-proceso-numero">1</div>
+                    <div class="desktop-proceso-contenido">
+                        <h3 class="desktop-proceso-paso-titulo">Envías tu idea</h3>
+                        <p class="desktop-proceso-paso-texto">
+                            Llenas el formulario, nos envías un mensaje o agendamos una llamada. 
+                            Cuéntanos qué necesitas, tu marca y tus objetivos.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Paso 2 -->
+                <div class="desktop-proceso-paso">
+                    <div class="desktop-proceso-numero">2</div>
+                    <div class="desktop-proceso-contenido">
+                        <h3 class="desktop-proceso-paso-titulo">Cotizamos en 24 horas</h3>
+                        <p class="desktop-proceso-paso-texto">
+                            Analizamos tu solicitud y te enviamos una propuesta clara: 
+                            alcance, tiempo de entrega y precio final. Sin costos ocultos.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Paso 3 -->
+                <div class="desktop-proceso-paso">
+                    <div class="desktop-proceso-numero">3</div>
+                    <div class="desktop-proceso-contenido">
+                        <h3 class="desktop-proceso-paso-titulo">Diseñamos</h3>
+                        <p class="desktop-proceso-paso-texto">
+                            Construimos tu web con código limpio y optimizado. 
+                            Te mostramos avances para que revises y nos des tu feedback.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Paso 4 -->
+                <div class="desktop-proceso-paso">
+                    <div class="desktop-proceso-numero">4</div>
+                    <div class="desktop-proceso-contenido">
+                        <h3 class="desktop-proceso-paso-titulo">Entregamos</h3>
+                        <p class="desktop-proceso-paso-texto">
+                            Subimos tu web a internet, configuramos el dominio si lo tienes 
+                            y te entregamos todos los archivos para que tengas el control total.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Paso 5 -->
+                <div class="desktop-proceso-paso">
+                    <div class="desktop-proceso-numero">5</div>
+                    <div class="desktop-proceso-contenido">
+                        <h3 class="desktop-proceso-paso-titulo">Soporte post-venta</h3>
+                        <p class="desktop-proceso-paso-texto">
+                            No te dejamos solo. Resolvemos dudas, hacemos ajustes menores 
+                            y te guiamos si necesitas editar algo tú mismo en el futuro.
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: FOOTER DESKTOP
+             ============================================ -->
+        <footer class="desktop-footer">
+            <div class="desktop-footer-interno">
+                <div class="desktop-footer-columna">
+                    <div class="desktop-footer-logo">
+                        <span class="desktop-footer-logo-icono">&lt;/&gt;</span>
+                        <span class="desktop-footer-logo-texto">STUDIO WEB</span>
+                    </div>
+                    <p class="desktop-footer-frase">Código limpio, resultados claros.</p>
+                </div>
+                <div class="desktop-footer-columna">
+                    <h4 class="desktop-footer-titulo-columna">Navegación</h4>
+                    <nav class="desktop-footer-links">
+                        <a href="index.html" class="desktop-footer-link">Inicio</a>
+                        <a href="plantillas.html" class="desktop-footer-link">Plantillas</a>
+                        <a href="servicios.html" class="desktop-footer-link">Servicios</a>
+                        <a href="nosotros.html" class="desktop-footer-link">Nosotros</a>
+                    </nav>
+                </div>
+                <div class="desktop-footer-columna">
+                    <h4 class="desktop-footer-titulo-columna">Servicios</h4>
+                    <nav class="desktop-footer-links">
+                        <a href="plantillas.html" class="desktop-footer-link">Plantillas web</a>
+                        <a href="plantillas.html#desktop-formulario-personalizar" class="desktop-footer-link">Personalización</a>
+                        <a href="servicios.html#desktop-mejorar" class="desktop-footer-link">Mejoras</a>
+                        <a href="servicios.html#desktop-contratos" class="desktop-footer-link">Contratos</a>
+                    </nav>
+                </div>
+                <div class="desktop-footer-columna">
+                    <h4 class="desktop-footer-titulo-columna">Contacto</h4>
+                    <p class="desktop-footer-contacto">
+                        <span>WhatsApp: +51 999 000 000</span>
+                        <span>Email: hola@studioweb.pe</span>
+                    </p>
+                    <div class="desktop-footer-redes">
+                        <a href="#" class="desktop-footer-red" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="desktop-footer-red" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="desktop-footer-red" aria-label="TikTok">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="desktop-footer-red" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="desktop-footer-red" aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="desktop-footer-copyright">
+                <p>© 2026 STUDIO WEB. Todos los derechos reservados.</p>
+                <a href="#" class="desktop-footer-politica">Política de privacidad</a>
+            </div>
+        </footer>
+
+
+    </div>
+    <!-- ########################## FIN VERSION DESKTOP ########################## -->
+
+
+
+
+
+    <!-- ######################################################################################### -->
+    <!-- ## VERSION TABLET                                                                      ## -->
+    <!-- ######################################################################################### -->
+    <div class="version-tablet">
+
+
+        <!-- ============================================
+             SECCION: NAVEGACION PRINCIPAL TABLET
+             ============================================ -->
+        <header class="tablet-nav-contenedor">
+            <div class="tablet-nav-interno">
+                <a href="index.html" class="tablet-nav-logo">
+                    <span class="tablet-nav-logo-icono">&lt;/&gt;</span>
+                    <span class="tablet-nav-logo-texto">STUDIO WEB</span>
+                </a>
+                <nav class="tablet-nav-menu">
+                    <a href="index.html" class="tablet-nav-link">Inicio</a>
+                    <a href="plantillas.html" class="tablet-nav-link">Plantillas</a>
+                    <a href="servicios.html" class="tablet-nav-link tablet-nav-activo">Servicios</a>
+                    <a href="nosotros.html" class="tablet-nav-link">Nosotros</a>
+                </nav>
+            </div>
+        </header>
+
+
+        <!-- ============================================
+             SECCION: HERO SERVICIOS TABLET
+             ============================================ -->
+        <section class="tablet-hero-servicios">
+            <div class="tablet-hero-servicios-contenido">
+                <h1 class="tablet-hero-servicios-titulo">Más allá de una plantilla</h1>
+                <p class="tablet-hero-servicios-subtitulo">
+                    ¿Ya tienes una web que no convence? ¿Necesitas un equipo de diseño a tu lado por meses?
+                </p>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: MEJORA TU PAGINA ACTUAL TABLET
+             Layout: Formulario arriba, ejemplos abajo.
+             ============================================ -->
+        <section class="tablet-mejorar" id="tablet-mejorar">
+            <div class="tablet-mejorar-cabecera">
+                <h2 class="tablet-mejorar-titulo">¿Ya tienes una web que no convence?</h2>
+                <p class="tablet-mejorar-texto">La optimizamos por completo. Envíanos la URL y te decimos qué podemos hacer.</p>
+            </div>
+            
+            <div class="tablet-mejorar-formulario-caja">
+                <h3 class="tablet-mejorar-formulario-titulo">Solicitar revisión gratuita</h3>
+                <form action="https://docs.google.com/forms/d/e/FORMULARIO_MEJORAR_ID/formResponse" 
+                      method="POST" target="_blank" class="tablet-mejorar-etiqueta">
+                    <div class="tablet-mejorar-grupo">
+                        <label for="tablet-mejorar-nombre" class="tablet-mejorar-label">Nombre completo</label>
+                        <input type="text" id="tablet-mejorar-nombre" name="entry.NOMBRE_ID" 
+                               class="tablet-mejorar-input" placeholder="Ej: Juan Pérez" required>
+                    </div>
+                    <div class="tablet-mejorar-grupo">
+                        <label for="tablet-mejorar-whatsapp" class="tablet-mejorar-label">WhatsApp</label>
+                        <input type="tel" id="tablet-mejorar-whatsapp" name="entry.TELEFONO_ID" 
+                               class="tablet-mejorar-input" placeholder="Ej: +51 999 888 777" required>
+                    </div>
+                    <div class="tablet-mejorar-grupo">
+                        <label for="tablet-mejorar-url" class="tablet-mejorar-label">URL de tu página actual</label>
+                        <input type="url" id="tablet-mejorar-url" name="entry.URL_ID" 
+                               class="tablet-mejorar-input" placeholder="Ej: https://mitienda.com" required>
+                    </div>
+                    <div class="tablet-mejorar-grupo">
+                        <label for="tablet-mejorar-detalles" class="tablet-mejorar-label">¿Qué te gustaría cambiar?</label>
+                        <textarea id="tablet-mejorar-detalles" name="entry.DETALLES_ID" 
+                                  class="tablet-mejorar-textarea" rows="4" 
+                                  placeholder="Ej: Se ve muy vieja, tarda en cargar..." required></textarea>
+                    </div>
+                    <button type="submit" class="tablet-mejorar-boton">Enviar solicitud de revisión</button>
+                </form>
+            </div>
+            
+            <div class="tablet-mejorar-ejemplos">
+                <h3 class="tablet-mejorar-ejemplos-titulo">Transformaciones reales</h3>
+                <div class="tablet-mejorar-caso">
+                    <p class="tablet-mejorar-caso-nombre">Caso: Restaurante El Sabor</p>
+                    <div class="tablet-mejorar-caso-imagenes">
+                        <div class="tablet-mejorar-antes">
+                            <img src="https://placehold.co/350x200/333333/888888?text=ANTES" 
+                                 alt="Antes" class="tablet-mejorar-img">
+                            <span class="tablet-mejorar-etiqueta-img">Antes</span>
+                        </div>
+                        <div class="tablet-mejorar-despues">
+                            <img src="https://placehold.co/350x200/141414/00d4ff?text=DESPUES" 
+                                 alt="Después" class="tablet-mejorar-img">
+                            <span class="tablet-mejorar-etiqueta-img">Después</span>
+                        </div>
+                    </div>
+                    <p class="tablet-mejorar-caso-resultado">✓ Carga: 8s → 1.2s | ✓ Visitas: +180%</p>
+                </div>
+                <div class="tablet-mejorar-caso">
+                    <p class="tablet-mejorar-caso-nombre">Caso: Clínica Dental Sonrisa</p>
+                    <div class="tablet-mejorar-caso-imagenes">
+                        <div class="tablet-mejorar-antes">
+                            <img src="https://placehold.co/350x200/333333/888888?text=ANTES" 
+                                 alt="Antes" class="tablet-mejorar-img">
+                            <span class="tablet-mejorar-etiqueta-img">Antes</span>
+                        </div>
+                        <div class="tablet-mejorar-despues">
+                            <img src="https://placehold.co/350x200/141414/00d4ff?text=DESPUES" 
+                                 alt="Después" class="tablet-mejorar-img">
+                            <span class="tablet-mejorar-etiqueta-img">Después</span>
+                        </div>
+                    </div>
+                    <p class="tablet-mejorar-caso-resultado">✓ Citas online: 0 → 35/mes</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: CONTRATOS MENSUALES TABLET
+             Layout: 3 tarjetas, posiblemente 2 arriba y 1 abajo 
+             o en fila segun CSS.
+             ============================================ -->
+        <section class="tablet-contratos" id="tablet-contratos">
+            <div class="tablet-contratos-cabecera">
+                <h2 class="tablet-contratos-titulo">Tu diseñador web por suscripción</h2>
+                <p class="tablet-contratos-texto">Contrata nuestro equipo por tiempo definido.</p>
+            </div>
+            
+            <div class="tablet-contratos-grid">
+                <article class="tablet-plan-tarjeta">
+                    <div class="tablet-plan-cabecera">
+                        <h3 class="tablet-plan-nombre">Básico</h3>
+                        <p class="tablet-plan-duracion">1 mes</p>
+                        <p class="tablet-plan-precio">S/ 599</p>
+                    </div>
+                    <ul class="tablet-plan-lista">
+                        <li class="tablet-plan-item">✓ Cambios de textos e imágenes</li>
+                        <li class="tablet-plan-item">✓ 2 revisiones de diseño</li>
+                        <li class="tablet-plan-item">✓ Ajustes de colores</li>
+                        <li class="tablet-plan-item">✓ Soporte por WhatsApp</li>
+                        <li class="tablet-plan-item tablet-plan-item-no">✗ Nuevas secciones</li>
+                    </ul>
+                    <a href="#tablet-formulario-contrato" class="tablet-plan-boton">Solicitar plan Básico</a>
+                </article>
+                
+                <article class="tablet-plan-tarjeta tablet-plan-destacado">
+                    <div class="tablet-plan-cabecera">
+                        <span class="tablet-plan-recomendado">Recomendado</span>
+                        <h3 class="tablet-plan-nombre">Pro</h3>
+                        <p class="tablet-plan-duracion">3 meses</p>
+                        <p class="tablet-plan-precio">S/ 1,499</p>
+                    </div>
+                    <ul class="tablet-plan-lista">
+                        <li class="tablet-plan-item">✓ Todo lo del plan Básico</li>
+                        <li class="tablet-plan-item">✓ Rediseños parciales</li>
+                        <li class="tablet-plan-item">✓ Nuevas páginas simples</li>
+                        <li class="tablet-plan-item">✓ Optimización mensual</li>
+                        <li class="tablet-plan-item">✓ Soporte prioritario</li>
+                    </ul>
+                    <a href="#tablet-formulario-contrato" class="tablet-plan-boton tablet-plan-boton-destacado">Solicitar plan Pro</a>
+                </article>
+                
+                <article class="tablet-plan-tarjeta">
+                    <div class="tablet-plan-cabecera">
+                        <h3 class="tablet-plan-nombre">Empresa</h3>
+                        <p class="tablet-plan-duracion">6 meses</p>
+                        <p class="tablet-plan-precio">S/ 2,799</p>
+                    </div>
+                    <ul class="tablet-plan-lista">
+                        <li class="tablet-plan-item">✓ Todo lo del plan Pro</li>
+                        <li class="tablet-plan-item">✓ Rediseño completo</li>
+                        <li class="tablet-plan-item">✓ Secciones ilimitadas</li>
+                        <li class="tablet-plan-item">✓ Landing pages</li>
+                        <li class="tablet-plan-item">✓ Reporte de métricas</li>
+                    </ul>
+                    <a href="#tablet-formulario-contrato" class="tablet-plan-boton">Solicitar plan Empresa</a>
+                </article>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: FORMULARIO CONTRATO TABLET
+             ============================================ -->
+        <section class="tablet-formulario-seccion" id="tablet-formulario-contrato">
+            <div class="tablet-formulario-caja">
+                <h2 class="tablet-formulario-titulo">Contratar plan de suscripción</h2>
+                <p class="tablet-formulario-texto">Dinos qué plan te interesa y te contactamos.</p>
+                <form action="https://docs.google.com/forms/d/e/FORMULARIO_CONTRATO_ID/formResponse" 
+                      method="POST" target="_blank" class="tablet-formulario-etiqueta">
+                    <div class="tablet-formulario-grupo">
+                        <label for="tablet-contrato-nombre" class="tablet-formulario-label">Nombre completo</label>
+                        <input type="text" id="tablet-contrato-nombre" name="entry.NOMBRE_ID" 
+                               class="tablet-formulario-input" placeholder="Ej: Juan Pérez" required>
+                    </div>
+                    <div class="tablet-formulario-grupo">
+                        <label for="tablet-contrato-whatsapp" class="tablet-formulario-label">WhatsApp</label>
+                        <input type="tel" id="tablet-contrato-whatsapp" name="entry.TELEFONO_ID" 
+                               class="tablet-formulario-input" placeholder="Ej: +51 999 888 777" required>
+                    </div>
+                    <div class="tablet-formulario-grupo">
+                        <label for="tablet-contrato-plan" class="tablet-formulario-label">¿Qué plan deseas?</label>
+                        <select id="tablet-contrato-plan" name="entry.PLAN_ID" 
+                                class="tablet-formulario-input tablet-formulario-select" required>
+                            <option value="">Selecciona un plan</option>
+                            <option value="basico-1mes">Básico - 1 mes (S/ 599)</option>
+                            <option value="pro-3meses">Pro - 3 meses (S/ 1,499)</option>
+                            <option value="empresa-6meses">Empresa - 6 meses (S/ 2,799)</option>
+                        </select>
+                    </div>
+                    <div class="tablet-formulario-grupo">
+                        <label for="tablet-contrato-empresa" class="tablet-formulario-label">Empresa o proyecto</label>
+                        <input type="text" id="tablet-contrato-empresa" name="entry.EMPRESA_ID" 
+                               class="tablet-formulario-input" placeholder="Ej: Tienda Virtual Perú">
+                    </div>
+                    <div class="tablet-formulario-grupo">
+                        <label for="tablet-contrato-detalles" class="tablet-formulario-label">¿Qué necesitas?</label>
+                        <textarea id="tablet-contrato-detalles" name="entry.DETALLES_ID" 
+                                  class="tablet-formulario-textarea" rows="4" 
+                                  placeholder="Ej: Actualizar catálogo mensual..." required></textarea>
+                    </div>
+                    <button type="submit" class="tablet-formulario-boton">Enviar solicitud</button>
+                    <a href="#tablet-contratos" class="tablet-formulario-cerrar">← Volver a planes</a>
+                </form>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: PROCESO DE TRABAJO TABLET
+             ============================================ -->
+        <section class="tablet-proceso">
+            <div class="tablet-proceso-cabecera">
+                <h2 class="tablet-proceso-titulo">Así trabajamos contigo</h2>
+                <p class="tablet-proceso-texto">Proceso transparente, sin sorpresas.</p>
+            </div>
+            <div class="tablet-proceso-timeline">
+                <div class="tablet-proceso-paso">
+                    <div class="tablet-proceso-numero">1</div>
+                    <div class="tablet-proceso-contenido">
+                        <h3 class="tablet-proceso-paso-titulo">Envías tu idea</h3>
+                        <p class="tablet-proceso-paso-texto">Llenas el formulario o nos escribes por WhatsApp.</p>
+                    </div>
+                </div>
+                <div class="tablet-proceso-paso">
+                    <div class="tablet-proceso-numero">2</div>
+                    <div class="tablet-proceso-contenido">
+                        <h3 class="tablet-proceso-paso-titulo">Cotizamos en 24h</h3>
+                        <p class="tablet-proceso-paso-texto">Propuesta clara: alcance, tiempo y precio final.</p>
+                    </div>
+                </div>
+                <div class="tablet-proceso-paso">
+                    <div class="tablet-proceso-numero">3</div>
+                    <div class="tablet-proceso-contenido">
+                        <h3 class="tablet-proceso-paso-titulo">Diseñamos</h3>
+                        <p class="tablet-proceso-paso-texto">Código limpio y optimizado. Avances para tu feedback.</p>
+                    </div>
+                </div>
+                <div class="tablet-proceso-paso">
+                    <div class="tablet-proceso-numero">4</div>
+                    <div class="tablet-proceso-contenido">
+                        <h3 class="tablet-proceso-paso-titulo">Entregamos</h3>
+                        <p class="tablet-proceso-paso-texto">Subimos tu web y te entregamos todos los archivos.</p>
+                    </div>
+                </div>
+                <div class="tablet-proceso-paso">
+                    <div class="tablet-proceso-numero">5</div>
+                    <div class="tablet-proceso-contenido">
+                        <h3 class="tablet-proceso-paso-titulo">Soporte post-venta</h3>
+                        <p class="tablet-proceso-paso-texto">Resolvemos dudas y hacemos ajustes menores.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: FOOTER TABLET
+             ============================================ -->
+        <footer class="tablet-footer">
+            <div class="tablet-footer-interno">
+                <div class="tablet-footer-columna">
+                    <div class="tablet-footer-logo">
+                        <span class="tablet-footer-logo-icono">&lt;/&gt;</span>
+                        <span class="tablet-footer-logo-texto">STUDIO WEB</span>
+                    </div>
+                    <p class="tablet-footer-frase">Código limpio, resultados claros.</p>
+                </div>
+                <div class="tablet-footer-columna">
+                    <h4 class="tablet-footer-titulo-columna">Links</h4>
+                    <nav class="tablet-footer-links">
+                        <a href="index.html" class="tablet-footer-link">Inicio</a>
+                        <a href="plantillas.html" class="tablet-footer-link">Plantillas</a>
+                        <a href="servicios.html" class="tablet-footer-link">Servicios</a>
+                        <a href="nosotros.html" class="tablet-footer-link">Nosotros</a>
+                    </nav>
+                </div>
+                <div class="tablet-footer-columna">
+                    <h4 class="tablet-footer-titulo-columna">Contacto</h4>
+                    <p class="tablet-footer-contacto">
+                        <span>WhatsApp: +51 999 000 000</span>
+                        <span>Email: hola@studioweb.pe</span>
+                    </p>
+                    <div class="tablet-footer-redes">
+                        <a href="#" class="tablet-footer-red" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="tablet-footer-red" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="tablet-footer-red" aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="tablet-footer-copyright">
+                <p>© 2026 STUDIO WEB. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+
+
+    </div>
+    <!-- ########################## FIN VERSION TABLET ########################## -->
+
+
+
+
+
+    <!-- ######################################################################################### -->
+    <!-- ## VERSION MOVIL (MOBILE)                                                              ## -->
+    <!-- ######################################################################################### -->
+    <div class="version-mobile">
+
+
+        <!-- ============================================
+             SECCION: NAVEGACION PRINCIPAL MOBILE
+             Tecnica: Checkbox hack para menu hamburguesa.
+             ============================================ -->
+        <header class="mobile-nav-contenedor">
+            <div class="mobile-nav-barra">
+                <a href="index.html" class="mobile-nav-logo">
+                    <span class="mobile-nav-logo-icono">&lt;/&gt;</span>
+                    <span class="mobile-nav-logo-texto">STUDIO WEB</span>
+                </a>
+                <label for="mobile-menu-toggle" class="mobile-menu-boton" aria-label="Abrir menu">
+                    <span class="mobile-menu-linea"></span>
+                    <span class="mobile-menu-linea"></span>
+                    <span class="mobile-menu-linea"></span>
+                </label>
+            </div>
+            <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-checkbox">
+            <nav class="mobile-nav-menu">
+                <a href="index.html" class="mobile-nav-link">Inicio</a>
+                <a href="plantillas.html" class="mobile-nav-link">Plantillas</a>
+                <a href="servicios.html" class="mobile-nav-link mobile-nav-activo">Servicios</a>
+                <a href="nosotros.html" class="mobile-nav-link">Nosotros</a>
+            </nav>
+        </header>
+
+
+        <!-- ============================================
+             SECCION: HERO SERVICIOS MOBILE
+             ============================================ -->
+        <section class="mobile-hero-servicios">
+            <div class="mobile-hero-servicios-contenido">
+                <h1 class="mobile-hero-servicios-titulo">Más allá de una plantilla</h1>
+                <p class="mobile-hero-servicios-subtitulo">
+                    ¿Web lenta o vieja? ¿Necesitas un equipo por meses? Tenemos la solución.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: MEJORA TU PAGINA ACTUAL MOBILE
+             Layout: Todo apilado verticalmente.
+             Formulario ancho completo. Ejemplos apilados.
+             ============================================ -->
+        <section class="mobile-mejorar" id="mobile-mejorar">
+            <div class="mobile-mejorar-cabecera">
+                <h2 class="mobile-mejorar-titulo">¿Ya tienes una web que no convence?</h2>
+                <p class="mobile-mejorar-texto">Envíanos la URL y te decimos qué podemos mejorar.</p>
+            </div>
+            
+            <div class="mobile-mejorar-formulario-caja">
+                <h3 class="mobile-mejorar-formulario-titulo">Solicitar revisión gratuita</h3>
+                <form action="https://docs.google.com/forms/d/e/FORMULARIO_MEJORAR_ID/formResponse" 
+                      method="POST" target="_blank" class="mobile-mejorar-etiqueta">
+                    <div class="mobile-mejorar-grupo">
+                        <label for="mobile-mejorar-nombre" class="mobile-mejorar-label">Nombre completo</label>
+                        <input type="text" id="mobile-mejorar-nombre" name="entry.NOMBRE_ID" 
+                               class="mobile-mejorar-input" placeholder="Ej: Juan Pérez" required>
+                    </div>
+                    <div class="mobile-mejorar-grupo">
+                        <label for="mobile-mejorar-whatsapp" class="mobile-mejorar-label">WhatsApp</label>
+                        <input type="tel" id="mobile-mejorar-whatsapp" name="entry.TELEFONO_ID" 
+                               class="mobile-mejorar-input" placeholder="Ej: +51 999 888 777" required>
+                    </div>
+                    <div class="mobile-mejorar-grupo">
+                        <label for="mobile-mejorar-url" class="mobile-mejorar-label">URL de tu página actual</label>
+                        <input type="url" id="mobile-mejorar-url" name="entry.URL_ID" 
+                               class="mobile-mejorar-input" placeholder="Ej: https://mitienda.com" required>
+                    </div>
+                    <div class="mobile-mejorar-grupo">
+                        <label for="mobile-mejorar-detalles" class="mobile-mejorar-label">¿Qué te gustaría cambiar?</label>
+                        <textarea id="mobile-mejorar-detalles" name="entry.DETALLES_ID" 
+                                  class="mobile-mejorar-textarea" rows="4" 
+                                  placeholder="Ej: Se ve muy vieja, tarda en cargar..." required></textarea>
+                    </div>
+                    <button type="submit" class="mobile-mejorar-boton">Enviar solicitud</button>
+                </form>
+            </div>
+            
+            <div class="mobile-mejorar-ejemplos">
+                <h3 class="mobile-mejorar-ejemplos-titulo">Transformaciones reales</h3>
+                <div class="mobile-mejorar-caso">
+                    <p class="mobile-mejorar-caso-nombre">Restaurante El Sabor</p>
+                    <div class="mobile-mejorar-caso-imagenes">
+                        <div class="mobile-mejorar-antes">
+                            <img src="https://placehold.co/300x180/333333/888888?text=ANTES" 
+                                 alt="Antes" class="mobile-mejorar-img">
+                            <span class="mobile-mejorar-etiqueta-img">Antes</span>
+                        </div>
+                        <div class="mobile-mejorar-despues">
+                            <img src="https://placehold.co/300x180/141414/00d4ff?text=DESPUES" 
+                                 alt="Después" class="mobile-mejorar-img">
+                            <span class="mobile-mejorar-etiqueta-img">Después</span>
+                        </div>
+                    </div>
+                    <p class="mobile-mejorar-caso-resultado">✓ Carga: 8s → 1.2s | ✓ Visitas: +180%</p>
+                </div>
+                <div class="mobile-mejorar-caso">
+                    <p class="mobile-mejorar-caso-nombre">Clínica Dental Sonrisa</p>
+                    <div class="mobile-mejorar-caso-imagenes">
+                        <div class="mobile-mejorar-antes">
+                            <img src="https://placehold.co/300x180/333333/888888?text=ANTES" 
+                                 alt="Antes" class="mobile-mejorar-img">
+                            <span class="mobile-mejorar-etiqueta-img">Antes</span>
+                        </div>
+                        <div class="mobile-mejorar-despues">
+                            <img src="https://placehold.co/300x180/141414/00d4ff?text=DESPUES" 
+                                 alt="Después" class="mobile-mejorar-img">
+                            <span class="mobile-mejorar-etiqueta-img">Después</span>
+                        </div>
+                    </div>
+                    <p class="mobile-mejorar-caso-resultado">✓ Citas online: 0 → 35/mes</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: CONTRATOS MENSUALES MOBILE
+             Layout: 3 tarjetas apiladas verticalmente.
+             Botones anchos para pulsar con dedo.
+             ============================================ -->
+        <section class="mobile-contratos" id="mobile-contratos">
+            <div class="mobile-contratos-cabecera">
+                <h2 class="mobile-contratos-titulo">Tu diseñador web por suscripción</h2>
+                <p class="mobile-contratos-texto">Contrata nuestro equipo por tiempo definido.</p>
+            </div>
+            
+            <div class="mobile-contratos-grid">
+                <article class="mobile-plan-tarjeta">
+                    <div class="mobile-plan-cabecera">
+                        <h3 class="mobile-plan-nombre">Básico</h3>
+                        <p class="mobile-plan-duracion">1 mes</p>
+                        <p class="mobile-plan-precio">S/ 599</p>
+                    </div>
+                    <ul class="mobile-plan-lista">
+                        <li class="mobile-plan-item">✓ Cambios de textos e imágenes</li>
+                        <li class="mobile-plan-item">✓ 2 revisiones de diseño</li>
+                        <li class="mobile-plan-item">✓ Ajustes de colores</li>
+                        <li class="mobile-plan-item">✓ Soporte por WhatsApp</li>
+                        <li class="mobile-plan-item mobile-plan-item-no">✗ Nuevas secciones</li>
+                    </ul>
+                    <a href="#mobile-formulario-contrato" class="mobile-plan-boton">Solicitar plan Básico</a>
+                </article>
+                
+                <article class="mobile-plan-tarjeta mobile-plan-destacado">
+                    <div class="mobile-plan-cabecera">
+                        <span class="mobile-plan-recomendado">Recomendado</span>
+                        <h3 class="mobile-plan-nombre">Pro</h3>
+                        <p class="mobile-plan-duracion">3 meses</p>
+                        <p class="mobile-plan-precio">S/ 1,499</p>
+                    </div>
+                    <ul class="mobile-plan-lista">
+                        <li class="mobile-plan-item">✓ Todo lo del plan Básico</li>
+                        <li class="mobile-plan-item">✓ Rediseños parciales</li>
+                        <li class="mobile-plan-item">✓ Nuevas páginas simples</li>
+                        <li class="mobile-plan-item">✓ Optimización mensual</li>
+                        <li class="mobile-plan-item">✓ Soporte prioritario</li>
+                    </ul>
+                    <a href="#mobile-formulario-contrato" class="mobile-plan-boton mobile-plan-boton-destacado">Solicitar plan Pro</a>
+                </article>
+                
+                <article class="mobile-plan-tarjeta">
+                    <div class="mobile-plan-cabecera">
+                        <h3 class="mobile-plan-nombre">Empresa</h3>
+                        <p class="mobile-plan-duracion">6 meses</p>
+                        <p class="mobile-plan-precio">S/ 2,799</p>
+                    </div>
+                    <ul class="mobile-plan-lista">
+                        <li class="mobile-plan-item">✓ Todo lo del plan Pro</li>
+                        <li class="mobile-plan-item">✓ Rediseño completo</li>
+                        <li class="mobile-plan-item">✓ Secciones ilimitadas</li>
+                        <li class="mobile-plan-item">✓ Landing pages</li>
+                        <li class="mobile-plan-item">✓ Reporte de métricas</li>
+                    </ul>
+                    <a href="#mobile-formulario-contrato" class="mobile-plan-boton">Solicitar plan Empresa</a>
+                </article>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: FORMULARIO CONTRATO MOBILE
+             ============================================ -->
+        <section class="mobile-formulario-seccion" id="mobile-formulario-contrato">
+            <div class="mobile-formulario-caja">
+                <h2 class="mobile-formulario-titulo">Contratar plan de suscripción</h2>
+                <p class="mobile-formulario-texto">Dinos qué plan te interesa.</p>
+                <form action="https://docs.google.com/forms/d/e/FORMULARIO_CONTRATO_ID/formResponse" 
+                      method="POST" target="_blank" class="mobile-formulario-etiqueta">
+                    <div class="mobile-formulario-grupo">
+                        <label for="mobile-contrato-nombre" class="mobile-formulario-label">Nombre completo</label>
+                        <input type="text" id="mobile-contrato-nombre" name="entry.NOMBRE_ID" 
+                               class="mobile-formulario-input" placeholder="Ej: Juan Pérez" required>
+                    </div>
+                    <div class="mobile-formulario-grupo">
+                        <label for="mobile-contrato-whatsapp" class="mobile-formulario-label">WhatsApp</label>
+                        <input type="tel" id="mobile-contrato-whatsapp" name="entry.TELEFONO_ID" 
+                               class="mobile-formulario-input" placeholder="Ej: +51 999 888 777" required>
+                    </div>
+                    <div class="mobile-formulario-grupo">
+                        <label for="mobile-contrato-plan" class="mobile-formulario-label">¿Qué plan deseas?</label>
+                        <select id="mobile-contrato-plan" name="entry.PLAN_ID" 
+                                class="mobile-formulario-input mobile-formulario-select" required>
+                            <option value="">Selecciona</option>
+                            <option value="basico-1mes">Básico - 1 mes (S/ 599)</option>
+                            <option value="pro-3meses">Pro - 3 meses (S/ 1,499)</option>
+                            <option value="empresa-6meses">Empresa - 6 meses (S/ 2,799)</option>
+                        </select>
+                    </div>
+                    <div class="mobile-formulario-grupo">
+                        <label for="mobile-contrato-empresa" class="mobile-formulario-label">Empresa o proyecto</label>
+                        <input type="text" id="mobile-contrato-empresa" name="entry.EMPRESA_ID" 
+                               class="mobile-formulario-input" placeholder="Ej: Tienda Virtual Perú">
+                    </div>
+                    <div class="mobile-formulario-grupo">
+                        <label for="mobile-contrato-detalles" class="mobile-formulario-label">¿Qué necesitas?</label>
+                        <textarea id="mobile-contrato-detalles" name="entry.DETALLES_ID" 
+                                  class="mobile-formulario-textarea" rows="4" 
+                                  placeholder="Ej: Actualizar catálogo mensual..." required></textarea>
+                    </div>
+                    <button type="submit" class="mobile-formulario-boton">Enviar solicitud</button>
+                    <a href="#mobile-contratos" class="mobile-formulario-cerrar">← Volver</a>
+                </form>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: PROCESO DE TRABAJO MOBILE
+             Layout: Timeline vertical, pasos apilados.
+             ============================================ -->
+        <section class="mobile-proceso">
+            <div class="mobile-proceso-cabecera">
+                <h2 class="mobile-proceso-titulo">Así trabajamos contigo</h2>
+                <p class="mobile-proceso-texto">Proceso transparente, sin sorpresas.</p>
+            </div>
+            <div class="mobile-proceso-timeline">
+                <div class="mobile-proceso-paso">
+                    <div class="mobile-proceso-numero">1</div>
+                    <div class="mobile-proceso-contenido">
+                        <h3 class="mobile-proceso-paso-titulo">Envías tu idea</h3>
+                        <p class="mobile-proceso-paso-texto">Formulario o WhatsApp. Cuéntanos tu marca y objetivos.</p>
+                    </div>
+                </div>
+                <div class="mobile-proceso-paso">
+                    <div class="mobile-proceso-numero">2</div>
+                    <div class="mobile-proceso-contenido">
+                        <h3 class="mobile-proceso-paso-titulo">Cotizamos en 24h</h3>
+                        <p class="mobile-proceso-paso-texto">Propuesta clara: alcance, tiempo y precio final.</p>
+                    </div>
+                </div>
+                <div class="mobile-proceso-paso">
+                    <div class="mobile-proceso-numero">3</div>
+                    <div class="mobile-proceso-contenido">
+                        <h3 class="mobile-proceso-paso-titulo">Diseñamos</h3>
+                        <p class="mobile-proceso-paso-texto">Código limpio. Avances para tu feedback.</p>
+                    </div>
+                </div>
+                <div class="mobile-proceso-paso">
+                    <div class="mobile-proceso-numero">4</div>
+                    <div class="mobile-proceso-contenido">
+                        <h3 class="mobile-proceso-paso-titulo">Entregamos</h3>
+                        <p class="mobile-proceso-paso-texto">Tu web en línea y archivos en tus manos.</p>
+                    </div>
+                </div>
+                <div class="mobile-proceso-paso">
+                    <div class="mobile-proceso-numero">5</div>
+                    <div class="mobile-proceso-contenido">
+                        <h3 class="mobile-proceso-paso-titulo">Soporte post-venta</h3>
+                        <p class="mobile-proceso-paso-texto">Dudas y ajustes menores resueltos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECCION: FOOTER MOBILE
+             ============================================ -->
+        <footer class="mobile-footer">
+            <div class="mobile-footer-interno">
+                <div class="mobile-footer-marca">
+                    <span class="mobile-footer-logo-icono">&lt;/&gt;</span>
+                    <span class="mobile-footer-logo-texto">STUDIO WEB</span>
+                    <p class="mobile-footer-frase">Código limpio, resultados claros.</p>
+                </div>
+                <nav class="mobile-footer-links">
+                    <a href="index.html" class="mobile-footer-link">Inicio</a>
+                    <a href="plantillas.html" class="mobile-footer-link">Plantillas</a>
+                    <a href="servicios.html" class="mobile-footer-link">Servicios</a>
+                    <a href="nosotros.html" class="mobile-footer-link">Nosotros</a>
+                </nav>
+                <div class="mobile-footer-contacto">
+                    <a href="https://wa.me/51999000000" class="mobile-footer-whatsapp">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                        </svg>
+                        Escribir por WhatsApp
+                    </a>
+                    <p class="mobile-footer-email">hola@studioweb.pe</p>
+                </div>
+                <div class="mobile-footer-redes">
+                    <a href="#" class="mobile-footer-red" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="mobile-footer-red" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="mobile-footer-red" aria-label="TikTok">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="mobile-footer-copyright">
+                <p>© 2026 STUDIO WEB.</p>
+                <a href="#" class="mobile-footer-politica">Política de privacidad</a>
+            </div>
+        </footer>
+
+
+    </div>
+    <!-- ########################## FIN VERSION MOBILE ########################## -->
+
+
+</body>
+</html>
